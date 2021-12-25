@@ -1,6 +1,5 @@
 import React from 'react';
 import TextAnime from "../../components/textAnime/textAnime"
-import Particles_compo from '../../components/background/background';
 import { Col, Container, Row } from 'react-bootstrap';
 import Work_img from '../../assets/Working.svg'
 import FadeIn from 'react-fade-in'
@@ -27,14 +26,12 @@ const Home = () => {
     return (
         <div className='Home'>
             <Container fluid={true}>
-                <Particles_compo />
                 <Row>
-                    <Col md={2}></Col>
-                    <Col md={6} style={{ height: "80vh", display: "flex", alignItems: "center" }}>
+                    <Col md={8} style={{ height: "80vh", display: "flex", alignItems: "center", padding: "3em"}}>
                         <TextAnime name="BOUKEZZATA Aymen" />
                     </Col>
                     <Col md={4} className='d-flex align-items-center position-relative'>
-                        <FadeIn transitionDuration={300} delay={100}>
+                        <FadeIn transitionDuration={1000} delay={100}>
                             <img src={Work_img} alt="Working" />
                         </FadeIn>
                     </Col>
@@ -42,7 +39,7 @@ const Home = () => {
                         <FadeIn transitionDuration={300} delay={1800}>
                             <animated.div style={styles}>
                                 <Link to="/portfolio">
-                                    <BsFillArrowDownSquareFill className='text-light-gray' style={{color: "inherit", textDecoration: "inherit"}}></BsFillArrowDownSquareFill>
+                                    <BsFillArrowDownSquareFill className='text-light-gray' style={{ textDecoration: "inherit" }}></BsFillArrowDownSquareFill>
                                 </Link>
                             </animated.div>
                         </FadeIn>

@@ -36,7 +36,7 @@ const TextAnime = (props) => {
                 </span>
             </h1>
             <FadeIn transitionDuration={500} delay={1500} className='text-gray'>
-                <h4>Ingénieur en Electronique, Automatique, Systeme embarqué </h4>
+                <h4>Ingénieur en Electronique, Automatique, Systèmes embarqués </h4>
             </FadeIn>
         </div>
     );

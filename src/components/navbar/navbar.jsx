@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './navbar.sass'
 import logo from '../../assets/logo.png'
 import Nav from "react-bootstrap/Nav";
@@ -7,9 +7,6 @@ import { BsFillPersonLinesFill, BsReverseLayoutTextSidebarReverse } from 'react-
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    useEffect(() => {
-        //document.querySelector('.data-rr-ui-event-key').classList.add("active");
-    })
     return (
         <div className='navbar_cmp'>
             <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style={{ width: "185px" }}>
