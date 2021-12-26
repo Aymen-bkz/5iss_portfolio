@@ -27,7 +27,7 @@ const Home = () => {
         <div className='Home'>
             <Container fluid={true}>
                 <Row>
-                    <Col md={8} style={{ height: "80vh", display: "flex", alignItems: "center", padding: "3em"}}>
+                    <Col md={8} >
                         <TextAnime name="BOUKEZZATA Aymen" />
                     </Col>
                     <Col md={4} className='d-flex align-items-center position-relative'>
@@ -35,7 +35,7 @@ const Home = () => {
                             <img src={Work_img} alt="Working" />
                         </FadeIn>
                     </Col>
-                    <div className='d-flex justify-content-center position-relative' style={{ fontSize: "xxx-large" }}>
+                    <div className='d-flex justify-content-center position-relative next' style={{ fontSize: "xxx-large" }}>
                         <FadeIn transitionDuration={300} delay={1800}>
                             <animated.div style={styles}>
                                 <Link to="/portfolio">

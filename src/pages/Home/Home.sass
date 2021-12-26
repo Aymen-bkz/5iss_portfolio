@@ -3,6 +3,11 @@ $text-gray: #8892b0
 $text-light-gray: #ccd6f6
 .Home
     margin-left: 185px
+.col-md-8
+    height: 80vh
+    display: flex
+    align-items: center
+    padding: 3em
 .ml6
     position: relative
     font-weight: 900
@@ -23,3 +28,11 @@ $text-light-gray: #ccd6f6
     color: $text-gray
 .text-light-gray
     color: $text-light-gray
+
+@media screen and (max-width: 430px)
+    .Home
+        margin-left: 0px
+    .col-md-8
+        height: 64vh
+    .next
+        padding: 1em 0

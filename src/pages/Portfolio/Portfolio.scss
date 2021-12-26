@@ -20,3 +20,9 @@
         flex: 7;
     }
 }
+
+@media screen and (max-width: 430px) {
+    .portfolio {
+        margin-left: 0;
+    }
+}

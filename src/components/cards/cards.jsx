@@ -28,10 +28,10 @@ const Cards = () => {
             });
     });
     return (
-        <div>
+        <div className='Cards-comp'>
             <section class="cards-wrapper">
                 <div class="card-grid-space">
-                    <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
+                    <NavLink to='/smartDevice' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                         <div className='card-body' style={{ "--bg-img": `url(${SD})` }}>
                             <div>
                                 <h1>Smart Device</h1>
