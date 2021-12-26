@@ -17,7 +17,7 @@ const Portfolio = () => {
             <Container fluid={true}>
                 <Row>
                     <Col md={12} className=''>
-                        <animated.h2 style={{margin: "4rem", ...props}} className="text-light-gray">Mon Portfolio</animated.h2>
+                        <animated.h2 style={{margin: "1em", ...props}} className="text-light-gray">Mon Portfolio</animated.h2>
                         <Cards></Cards>
                     </Col>
                 </Row>

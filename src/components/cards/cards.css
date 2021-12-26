@@ -8,9 +8,11 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 5em;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 1em;
     grid-auto-rows: minmax(100px, auto);
+    padding: 8em 0;
+    overflow: hidden;
 }
 
 .card-body {
@@ -18,7 +20,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
     height: 20em;
     width: 15em;
-    font-size: 1.1em;
+    font-size: 0.9em;
     color: white;
     border-radius: 1em;
     padding: 1em;
