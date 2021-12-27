@@ -1,6 +1,6 @@
 import React from 'react';
 import TextAnime from "../../components/textAnime/textAnime"
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 import Work_img from '../../assets/Working.svg'
 import FadeIn from 'react-fade-in'
 import { BsFillArrowDownSquareFill } from 'react-icons/bs'
@@ -28,11 +28,12 @@ const Home = () => {
             <Container fluid={true}>
                 <Row>
                     <Col md={8} >
-                        <TextAnime name="BOUKEZZATA Aymen" />
+                        <TextAnime nom="BOUKEZZATA" prenom='Aymen' />
                     </Col>
                     <Col md={4} className='d-flex align-items-center position-relative'>
                         <FadeIn transitionDuration={1000} delay={100}>
-                            <img src={Work_img} alt="Working" />
+                            <Image fluid="true" src={Work_img}></Image>
+                            {/* <img src={Work_img} alt="Working" /> */}
                         </FadeIn>
                     </Col>
                     <div className='d-flex justify-content-center position-relative next' style={{ fontSize: "xxx-large" }}>

@@ -3,13 +3,17 @@ import Anime from 'animejs/lib/anime.es'
 import './textAnime.sass'
 import FadeIn from 'react-fade-in'
 
+
 const TextAnime = (props) => {
     const [anime_text] = useState({
-        name: props.name
+        nom: props.nom,
+        prenom: props.prenom,
     });
     useEffect(() => {
-        var textWrapper = document.querySelector('.ml6 .letters');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+        var textWrapper = document.querySelectorAll('.ml6 .letters');
+        textWrapper.forEach(e => {
+            e.innerHTML = e.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+        })
         Anime.timeline({ loop: false })
             .add({
                 targets: '.ml6',
@@ -32,7 +36,12 @@ const TextAnime = (props) => {
             </FadeIn> */}
             <h1 className="ml6 text-light-gray">
                 <span className="text-wrapper">
-                    <span className="letters"> {anime_text.name} </span>
+                    <div className="nom">
+                        <span className="letters"> {anime_text.nom} </span>
+                    </div>
+                    <div className="prenom">
+                        <span className="letters"> {anime_text.prenom} </span>
+                    </div>
                 </span>
             </h1>
             <FadeIn transitionDuration={500} delay={1500} className='text-gray'>
