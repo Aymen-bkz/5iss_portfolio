@@ -36,7 +36,7 @@ const Navbar = () => {
         }
     }, [sideBar, dimensions])
     return (
-        <div className='navbar_cmp' style={{ height: sideBar ? '100vh': '4em', transitionDelay: sideBar ? '': '0.5s'}}>
+        <div className='navbar_cmp' style={{ height: sideBar ? '100%': '4em', transitionDelay: sideBar ? '': '0.5s'}}>
             <animated.div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark navbar-active" style={{ width: "185px", ...props}}>
                 <Link to='/' className='d-flex align-items-center mb-3 mb-md-0 justify-content-center text-white text-decoration-none'>
                     <div style={{ background: "white", borderRadius: "0.2rem" }}>

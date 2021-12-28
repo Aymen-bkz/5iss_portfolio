@@ -42,6 +42,52 @@ element {
     max-height: 450px;
 }
 
+
+/* carousel sensor */
+
+.div-sensor {
+    display: flex;
+    justify-content: center;
+}
+
+.Sensor-carousel {
+    width: 65%;
+}
+
+.carousel-control-next {
+    right: -3em;
+}
+
+.carousel-control-prev {
+    left: -3em;
+}
+
+.carousel-indicators {
+    bottom: -8em;
+    justify-content: space-between;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.carousel-indicators button {
+    width: 6em !important;
+    height: 6em!important;
+    background-size: cover;
+}
+
+.carousel-caption {
+    display: flex;
+    position: initial;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #8892b0;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/* carousel sensor */
+
 @media screen and (max-width: 430px) {
     .smart-device {
         margin: 4em 0;
@@ -49,4 +95,20 @@ element {
     .intro {
         width: 90vw !important;
     }
+    /* carousel sensor */
+    .Sensor-carousel {
+        width: 80%;
+    }
+    .carousel-indicators button {
+        width: 4em !important;
+        height: 4em!important;
+        background-size: cover;
+    }
+    .carousel-indicators {
+        bottom: -7em;
+        justify-content: space-between;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    /* carousel sensor */
 }

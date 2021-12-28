@@ -21,7 +21,7 @@ const Home = () => {
             translateY: 10,
             loop: { reverse: true },
         })
-    }, [])
+    }, [api])
 
     return (
         <div className='Home'>
