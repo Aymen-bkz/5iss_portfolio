@@ -3,11 +3,16 @@
     --transition-time: 0.5s;
 }
 
+.Cards-comp {
+    display: flex;
+    justify-content: center;
+}
+
 .cards-wrapper {
     display: grid;
     justify-content: space-between;
     align-items: center;
-    margin: 0 5em;
+    /* margin: 0 calc(0.2vw + 0.1em); */
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1em;
     grid-auto-rows: minmax(100px, auto);
@@ -164,7 +169,7 @@
 
 @media screen and (max-width: 500px) {
     .cards-wrapper {
-        padding: 4rem 2rem;
+        padding: 4rem 1rem;
     }
     .card-body {
         max-width: calc(100vw - 4rem);

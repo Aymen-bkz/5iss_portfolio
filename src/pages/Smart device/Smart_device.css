@@ -1,0 +1,52 @@
+element {
+    --text-color: #FFAA4C;
+    --text-gray: #8892b0;
+    --text-light-gray: #ccd6f6;
+}
+
+.smart-device {
+    margin-left: 185px;
+}
+
+.table>:not(caption)>*>* {
+    background-color: #e9ecf5;
+}
+
+.maquette-smart-d {
+    display: '';
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.intro {
+    width: 70vw;
+    text-align: justify;
+}
+
+.table {
+    border-color: #a9b1c9;
+}
+
+.Sensor {
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+    max-height: 27em;
+}
+
+.sensor-img {
+    width: 80%
+}
+
+.col-comp {
+    max-height: 450px;
+}
+
+@media screen and (max-width: 430px) {
+    .smart-device {
+        margin: 4em 0;
+    }
+    .intro {
+        width: 90vw !important;
+    }
+}

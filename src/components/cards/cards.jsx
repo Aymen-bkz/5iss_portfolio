@@ -29,62 +29,62 @@ const Cards = () => {
     });
     return (
         <div className='Cards-comp'>
-            <section class="cards-wrapper">
-                <div class="card-grid-space">
+            <section className="cards-wrapper">
+                <div className="card-grid-space">
                     <NavLink to='/smartDevice' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                         <div className='card-body' style={{ "--bg-img": `url(${SD})` }}>
                             <div>
                                 <h1>Smart Device</h1>
-                                <div class="tags">
-                                    <div class="tag">Smart Device</div>
+                                <div className="tags">
+                                    <div className="tag">Smart Device</div>
                                 </div>
                             </div>
                         </div>
                     </NavLink>
                 </div>
-                <div class="card-grid-space">
+                <div className="card-grid-space">
                     <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                         <div className='card-body' style={{ "--bg-img": `url(${Com})` }}>
                             <div>
                                 <h1>Communication</h1>
-                                <div class="tags">
-                                    <div class="tag">Communication</div>
+                                <div className="tags">
+                                    <div className="tag">Communication</div>
                                 </div>
                             </div>
                         </div>
                     </NavLink>
                 </div>
-                <div class="card-grid-space">
+                <div className="card-grid-space">
                     <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                         <div className='card-body' style={{ "--bg-img": `url(${IoT})` }}>
                             <div>
                                 <h1>Middelware</h1>
-                                <div class="tags">
-                                    <div class="tag">Middelware and Service</div>
+                                <div className="tags">
+                                    <div className="tag">Middelware and Service</div>
                                 </div>
                             </div>
                         </div>
                     </NavLink>
                 </div>
-                <div class="card-grid-space">
+                <div className="card-grid-space">
                     <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                         <div className='card-body' style={{ "--bg-img": `url(${BigData})` }}>
                             <div>
                                 <h1>Big data</h1>
-                                <div class="tags">
-                                    <div class="tag">Analysis and treatment of data</div>
+                                <div className="tags">
+                                    <div className="tag">Analysis and treatment of data</div>
                                 </div>
                             </div>
                         </div>
                     </NavLink>
                 </div>
-                <div class="card-grid-space">
+                <div className="card-grid-space">
                     <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                         <div className='card-body' style={{ "--bg-img": `url(${Innovation})` }}>
                             <div>
                                 <h1>Project Innovation</h1>
-                                <div class="tags">
-                                    <div class="tag">Innovation</div>
+                                <div className="tags">
+                                    <div className="tag">Innovation</div>
                                 </div>
                             </div>
                         </div>

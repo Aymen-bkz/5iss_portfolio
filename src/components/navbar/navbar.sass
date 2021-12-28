@@ -8,6 +8,8 @@
     overflow-y: hidden
     position: fixed
     z-index: 10
+.nav-active
+  z-index: 10
 hr
     margin: 1rem 0
     color: inherit
@@ -80,6 +82,21 @@ hr
 .lh-tight
   line-height: 1.25
 
+.navbar-resp
+  width: 100vw
+  height: 4em
+  display: flex;
+  justify-content: end;
+  align-items: center;
+.navbar-btn
+    font-size: 1.5em
+    margin-right: 0.5em
+
 @media screen and (max-width: 430px) 
-  .navbar_cmp
+  .navbar-active
+    // visibility: collapse
+    z-index: 10
+
+@media screen and (min-width: 431px)
+  .navbar-resp
     display: none
