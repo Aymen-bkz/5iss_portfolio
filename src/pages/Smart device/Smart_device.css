@@ -64,14 +64,15 @@ element {
 
 .carousel-indicators {
     bottom: -8em;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-right: 0;
     margin-left: 0;
 }
 
 .carousel-indicators button {
-    width: 6em !important;
-    height: 6em!important;
+    width: 5em !important;
+    height: 6.5em!important;
+    background-position: center;
     background-size: cover;
 }
 
@@ -98,6 +99,7 @@ element {
     /* carousel sensor */
     .Sensor-carousel {
         width: 80%;
+        margin-bottom: 8em;
     }
     .carousel-indicators button {
         width: 4em !important;
