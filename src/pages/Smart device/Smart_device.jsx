@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { Button, Carousel, Col, Container, Image, Row, Table } from 'react-bootstrap';
+import { Button, Carousel, Col, Container, Image, Modal, ModalTitle, Row, Table } from 'react-bootstrap';
 import Latex from 'react-latex'
-import { BsClipboardData, BsZoomIn } from 'react-icons/bs'
+import { BsClipboardData } from 'react-icons/bs'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+
+import PCB_comp from '../../components/3d-component/3d-component'
 
 import Sensor from '../../assets/AIME Sensor.svg'
 import R_alu from '../../assets/R_alu.svg'
@@ -17,6 +19,7 @@ import LTC1050 from '../../assets/LTC1050.JPG'
 import GASWO from '../../assets/GASWO.JPG'
 import CMD_R_POLY from '../../assets/cmd_R_poly.JPG'
 import intterupt from '../../assets/intterupt.JPG'
+import PCB from '../../assets/PCB.JPG'
 
 import './Smart_device.css'
 import { useEffect } from 'react';
@@ -25,6 +28,9 @@ import datasheet from '../../assets/Datasheet AIME.pdf'
 
 const Smart_device = () => {
     const [imgs] = useState([Sensor, R_alu, R_poly, R_sens, Assembly, DIE, goute]);
+    const [show, setShow] = useState(false);
+    const handleClose = () => {window.location.reload(false)}
+    const handleShow = () => setShow(true);
     const props = useSpring({
         to: { opacity: 1 },
         from: { opacity: 0 },
@@ -278,7 +284,7 @@ const Smart_device = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={8} className='d-flex justify-content-center align-items-center'>
+                        <Col md={8} className='d-flex justify-content-center align-items-center lol'>
                             <p className='text-white'>
                                 <br />
                                 Nous avons rajouté un comparateur sur lequel on applique une tension de référence sur <Latex>{"$V_+$"}</Latex> qui représente le seuil
@@ -293,6 +299,39 @@ const Smart_device = () => {
                             <Zoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
                                 <div className='img-div'>
                                     <Image src={intterupt} className='w-100' />
+                                    {/* <BsZoomIn className='zoom-icon' /> */}
+                                </div>
+
+                            </Zoom>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={8} className='d-flex justify-content-center align-items-center' >
+                            <div>
+                                {/* <PCB_comp id="3d-pcb" dim={pcb_dim} /> */}
+                                <Button variant="primary" onClick={handleShow}>
+                                    PCB 3D model
+                                </Button>
+
+                                <Modal show={show} onHide={handleClose} fullscreen={true}>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>PCB 3D Model</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body id="3d-pcb" className='d-flex justify-content-center align-items-center'>
+                                        <PCB_comp id="3d-pcb" />
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="danger" onClick={handleClose}>
+                                            Fermer
+                                        </Button>
+                                    </Modal.Footer>
+                                </Modal>
+                            </div>
+                        </Col>
+                        <Col md={4} >
+                            <Zoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
+                                <div className='img-div d-flex justify-content-center align-items-center'>
+                                    <Image src={PCB} className='w-100' />
                                     {/* <BsZoomIn className='zoom-icon' /> */}
                                 </div>
 

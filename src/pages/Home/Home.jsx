@@ -46,7 +46,6 @@ const Home = () => {
                         </FadeIn>
                     </div>
                 </Row>
-
             </Container>
         </div>
     );
