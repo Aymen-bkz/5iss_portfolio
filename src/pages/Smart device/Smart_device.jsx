@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Button, Carousel, Col, Container, Image, Modal, ModalTitle, Row, Table } from 'react-bootstrap';
 import Latex from 'react-latex'
-import { BsClipboardData } from 'react-icons/bs'
+import { BsClipboardData, BsGithub } from 'react-icons/bs'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
@@ -29,7 +29,7 @@ import datasheet from '../../assets/Datasheet AIME.pdf'
 const Smart_device = () => {
     const [imgs] = useState([Sensor, R_alu, R_poly, R_sens, Assembly, DIE, goute]);
     const [show, setShow] = useState(false);
-    const handleClose = () => {window.location.reload(false)}
+    const handleClose = () => { window.location.reload(false) }
     const handleShow = () => setShow(true);
     const props = useSpring({
         to: { opacity: 1 },
@@ -225,9 +225,9 @@ const Smart_device = () => {
                             <p className='text-white'>
                                 Le projet a été réalisé en deux étapes : <br />
                                 Tout d’abord, il fallait concevoir le schéma électronique,
-                                le capteur de gaz étant une résistance sensible à la concentration de l'environnement et de l’ordre
+                                le capteur de gaz étant une résistance sensible à la concentration du gaz et elle est de l’ordre
                                 des gigaohms, un diviseur de tension ne serait pas efficace pour que le convertisseur Analogique
-                                Numérique (ADC) du microcontrôleur puisse lire les données, on a donc utilisé un amplificateur
+                                Numérique (ADC) du microcontrôleur puisse lire les données. On a donc utilisé un amplificateur
                                 opérationnel (LTC1050) avec un faible offset pour amplifier le courant passant par le capteur
                                 et filtrer le bruit. <br />
                                 La valeur de la résistance du capteur: <br />
@@ -248,7 +248,7 @@ const Smart_device = () => {
                         <Col md={8} className='d-flex justify-content-center align-items-center'>
                             <p className='text-white'>
                                 <br />
-                                Le capteur de température a une résistance faible, un diviseur de tension suffi pour lire sa valeur avec cette formule: <br />
+                                Le capteur de température a une résistance faible, un diviseur de tension suffi pour lire sa valeur avec la formule suivante: <br />
                                 <Latex displayMode={true}>{"$R_{Alu} = (\\frac{V_{Alu.adc} \\cdot R_3}{3V3 - V_{Alu.adc}})  $"}</Latex> <br />
                                 Un Switch SPDT pour commuter entre les deux capteur de gas
                             </p>
@@ -268,8 +268,8 @@ const Smart_device = () => {
                             <p className='text-white'>
                                 <br />
                                 Notre système est fonctionnel qu'à partir de 200°C, il faudrait donc appliquer une tension aux bornes
-                                de la résistance poly-silicium le courant traversant va générer une chaleur qu’il faut là commander.
-                                Une PWM 8 bits du microcontrôleur viens commander le transistor NPN de 0% à 100% (0 a 255), avec le capteur
+                                de la résistance poly-silicium, le courant traversant va générer une chaleur qu’il faut là commander.
+                                Une PWM 8 bits du microcontrôleur viens commander le transistor NPN de 0% à 100% (0 à 255), avec le capteur
                                 de température on peut intégrer un correcteur numérique PID pour corriger la commande.
                             </p>
                         </Col>
@@ -292,7 +292,13 @@ const Smart_device = () => {
                                 <Latex>{"$V_-$"}</Latex> sera la tension du capteur amplifié.
                                 À l’état initial le <Latex>{"$V_- > V_+$"}</Latex>, on a un état 0 à la sortie du comparateur.
                                 À la présence d’un gaz, la tension du capteur chute <Latex>{"$V_- < V_+$"}</Latex> et l’état du comparateur
-                                est à 1 le microcontrôleur capture le front montant et déclenche l'interruption.
+                                est à 1 le microcontrôleur capture le front montant et déclenche l'interruption. <br /> <br />
+                                Enfin nous avons développé toutes les fonctionnalités pour traiter les données du capteur
+                                de gaz sur un microcontrôleur ESP32 et configurer le module LoRA (RN2483) pour communiquer
+                                le système avec les serveurs de “The things Network”
+                                Le tout se trouve sur Github&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <Button variant='secondary' href='https://github.com/MOSH-Insa-Toulouse/2021-2022-BOUKEZZATA-BERTON-MESLOUH.git' target="_blank"> <BsGithub/> </Button>
+
                             </p>
                         </Col>
                         <Col md={4}>
