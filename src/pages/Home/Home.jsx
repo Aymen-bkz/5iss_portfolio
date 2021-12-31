@@ -27,7 +27,7 @@ const Home = () => {
         <div className='Home'>
             <Container fluid={true}>
                 <Row>
-                    <Col md={8} >
+                    <Col md={8} className='full-name'>
                         <TextAnime nom="BOUKEZZATA" prenom='Aymen' />
                     </Col>
                     <Col md={4} className='d-flex align-items-center position-relative'>
