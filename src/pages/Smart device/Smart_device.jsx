@@ -295,7 +295,7 @@ const Smart_device = () => {
                                 est à 1 le microcontrôleur capture le front montant et déclenche l'interruption. <br /> <br />
                                 Enfin nous avons développé toutes les fonctionnalités pour traiter les données du capteur
                                 de gaz sur un microcontrôleur ESP32 et configurer le module LoRA (RN2483) pour communiquer
-                                le système avec les serveurs de “The things Network”
+                                le système avec les serveurs de “The things Network” <br />
                                 Le tout se trouve sur Github&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <Button variant='secondary' href='https://github.com/MOSH-Insa-Toulouse/2021-2022-BOUKEZZATA-BERTON-MESLOUH.git' target="_blank"> <BsGithub/> </Button>
 

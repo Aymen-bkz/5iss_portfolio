@@ -22,7 +22,7 @@ const Cards = () => {
             })
             .add({
                 targets: '.cards-wrapper .card-grid-space',
-                translateY: ["5.1em", 0],
+                translateY: ["25em", 0],
                 translateZ: 0,
                 delay: (el, i) => 200 * i
             });
