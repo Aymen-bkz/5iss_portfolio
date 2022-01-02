@@ -47,7 +47,11 @@ img {
 }
 
 .MOSH {
-    margin: 4em 1em 1em 1em
+    margin: 4em 2em 2em 2em
+}
+
+.titre {
+    margin: 2em
 }
 
 .zoom-icon {

@@ -53,14 +53,11 @@ const Smart_device = () => {
     return (
         <div className='smart-device'>
             <Container fluid={true} >
-                <animated.h2 style={{ margin: "1em", ...props }} className="text-orange">Smart Device</animated.h2>
+                <animated.h2 style={props} className="text-orange titre">Smart Device</animated.h2>
                 <Row>
                     <Col sm={12}>
                         <p className='text-white intro'>
-                            Smart Device est une unité de formation qui consiste au départ à fabriquer un capteur de gaz en
-                            circuit intégré. Ensuite, concevoir un système électronique capable de détecter la présence de certains
-                            gaz et mesurer leur concentration. Enfin, connecter le système à une gateway situé à l’INSA et communiquer
-                            l’ensemble des données avec le protocole LoRAWan.
+                            Smart device est une unité de formation composée de quatre matières.
                         </p>
                         <br />
                         <p></p>
@@ -102,9 +99,15 @@ const Smart_device = () => {
                                 </tbody>
                             </Table>
                         </div>
+                        <p className="text-white">
+                            <br />
+                            Le but ce module est de s’introduire dans le monde des objets connecté et de réaliser un projet sur lequel on
+                            introduit un capteur gaz fabriqué à l’AIME, concevoir un système électronique capable de commander le capteur,
+                            et communiqué l'ensemble des données collecté vers un serveur via le protocole de communication LoRA/LoRAWAN
+                        </p>
                     </Col>
                 </Row>
-                <animated.h2 style={{ margin: "1em", ...props }} className="text-orange">Fabrication et intégration de capteurs nanotechnologiques (AIME)</animated.h2>
+                <animated.h2 style={props} className="text-orange titre">Fabrication et intégration de capteurs nanotechnologiques (AIME)</animated.h2>
                 <p className="text-white">Lors de notre stage à l’atelier Interuniversitaire Micro-nano Électronique (AIME) nous avons réalisé un capteur
                     chimique à l’Oxyde de Tungstène <Latex>{"${WO_3}$"}</Latex> de type semi-conducteur puis de l’évaluer sous
                     atmosphère gazeuse contrôlée pour en fournir la datasheet. <br /> Le procédé se décompose alors en 4
@@ -216,16 +219,32 @@ const Smart_device = () => {
                         Hardware, Embedded IA (Ms&OSH)
                     </animated.h2>
                     <p className="text-white">
-                        Dans cette partie nous devons intégré le capteur conçu à l’AIME dans un circuit électronique capable de récupérer les
-                        données, traiter et communiquer en LoRA les informations utiles du capteur
+                        Dans cette matière, nous avons travaillé sur du Open-Source hardware, l'ensemble des composants qui constituent un objet
+                        connecté (microcontrôleur, capteur, actionneur et modules de communication). Nous avons suivi des cours sur
+                        l’introduction du KiCAD pour la conception des circuits électroniques, une présentation de la syntaxe du langage de
+                        programmation et le framework de développement Arduino, et des éléments d'interfaçage Arduino/Processing et Android.
+                        <br />
+
+                        De mon parcours en système embarqué, je ne trouvais pas de difficulté sur l'avancement des tâches.
+                        C’est pour cette raison que j’ai décidé avec mon groupe de travailler en autonomie sur le projet. <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;• Nous avons étudié l'ensemble des fonctionnalités de notre système. <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;• définir le microcontrôleur qui répond au besoin du système. <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;• et concevoir les symboles et footprints de nos composants sur KiCAD. <br />
+                        La partie qui m’était nouvelle et plus intéressante c’était sur le module de communication LoRA (RN2483), j’ai appris à configurer
+                        le module sur un ESP32 et communiquer les données en radio ou à travers une Gateway vers un serveur TTN.
+
                     </p>
+
+                    <animated.h2 style={props} className="text-orange titre">Introduction aux capteurs</animated.h2>
+
+
                     <h4 className='text-light-gray'>Mon Rôle</h4>
                     <Row>
                         <Col md={8} className='d-flex justify-content-center align-items-center'>
                             <p className='text-white'>
                                 Le projet a été réalisé en deux étapes : <br />
-                                Tout d’abord, il fallait concevoir le schéma électronique,
-                                le capteur de gaz étant une résistance sensible à la concentration du gaz et elle est de l’ordre
+                                Tout d’abord, mon rôle était de concevoir le schéma électronique.
+                                Le capteur de gaz étant une résistance sensible à la concentration du gaz et elle est de l’ordre
                                 des gigaohms, un diviseur de tension ne serait pas efficace pour que le convertisseur Analogique
                                 Numérique (ADC) du microcontrôleur puisse lire les données. On a donc utilisé un amplificateur
                                 opérationnel (LTC1050) avec un faible offset pour amplifier le courant passant par le capteur
@@ -297,7 +316,7 @@ const Smart_device = () => {
                                 de gaz sur un microcontrôleur ESP32 et configurer le module LoRA (RN2483) pour communiquer
                                 le système avec les serveurs de “The things Network” <br />
                                 Le tout se trouve sur Github&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <Button variant='secondary' href='https://github.com/MOSH-Insa-Toulouse/2021-2022-BOUKEZZATA-BERTON-MESLOUH.git' target="_blank"> <BsGithub/> </Button>
+                                <Button variant='secondary' href='https://github.com/MOSH-Insa-Toulouse/2021-2022-BOUKEZZATA-BERTON-MESLOUH.git' target="_blank" style={{ margin: '1em' }}> <BsGithub /> </Button>
 
                             </p>
                         </Col>
