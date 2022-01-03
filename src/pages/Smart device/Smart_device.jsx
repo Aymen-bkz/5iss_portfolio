@@ -69,7 +69,7 @@ const Smart_device = () => {
                         </Card.Body>
                     </Card>
                 </div>
-                <h2 id="description" className='text-orange titre'>Description</h2>
+                <h2 id="description" className='text-gray titre'>Description</h2>
                 <Row>
                     <Col sm={12}>
                         <p className='text-white intro'>
@@ -123,6 +123,7 @@ const Smart_device = () => {
                         </div>
                     </Col>
                 </Row>
+                <h2 id="description" className='text-gray titre'>Partie Technique</h2>
                 <animated.h2 style={props} className="text-orange titre">Fabrication et intégration de capteurs nanotechnologiques (AIME)</animated.h2>
                 <p className="text-white">
                     La première expérience que nous avons eue dans le cadre du module
@@ -280,8 +281,8 @@ const Smart_device = () => {
                                 La première partie coté software, on a commencé par la configuration du module LoRa RN2482,
                                 avec les instructions du constructeur. On avait réussi à établir une communication radio
                                 avec la couche physique entre deux module LoRa et transmettre de données d'un capteur
-                                de gaz Grove. Ensuite nous avons utilisé la bibliothèque <span><a href="https://github.com/jpmeijers/RN2483-Arduino-Library">jpmeijers/RN2483-Arduino-Library</a> </span> 
-                                 pour configurer le RN2483 pour établir une communication avec un serveur TTN avec la couche MAC du module (LoRaWAN)
+                                de gaz Grove. Ensuite nous avons utilisé la bibliothèque <span><a href="https://github.com/jpmeijers/RN2483-Arduino-Library">jpmeijers/RN2483-Arduino-Library</a> </span>
+                                pour configurer le RN2483 pour établir une communication avec un serveur TTN avec la couche MAC du module (LoRaWAN)
 
                             </p>
                         </Col>
@@ -299,6 +300,9 @@ const Smart_device = () => {
                         <Col md={8} className='d-flex justify-content-center align-items-center'>
                             <p className='text-white'>
                                 <br />
+                                La deuxième partie coté hardware. En plus du circuit amplificateur, nous avons rajouté une commande du
+                                capteur du gaz et un comparateur pour déclencher une interruption externe sur le microcontrôleur.
+                                <br /> <br />
                                 Le capteur de température a une résistance faible, un diviseur de tension suffi pour lire sa valeur avec la formule suivante: <br />
                                 <Latex displayMode={true}>{"$R_{Alu} = (\\frac{V_{Alu.adc} \\cdot R_3}{3V3 - V_{Alu.adc}})  $"}</Latex> <br />
                                 Un Switch SPDT pour commuter entre les deux capteur de gas
@@ -319,7 +323,7 @@ const Smart_device = () => {
                             <p className='text-white'>
                                 <br />
                                 Notre système est fonctionnel qu'à partir de 200°C, il faudrait donc appliquer une tension aux bornes
-                                de la résistance poly-silicium, le courant traversant va générer une chaleur qu’il faut là commander.
+                                de la résistance poly-silicium, le courant traversant génère une chaleur qu’il faut là commander.
                                 Une PWM 8 bits du microcontrôleur viens commander le transistor NPN de 0% à 100% (0 à 255), avec le capteur
                                 de température on peut intégrer un correcteur numérique PID pour corriger la commande.
                             </p>
@@ -339,15 +343,13 @@ const Smart_device = () => {
                             <p className='text-white'>
                                 <br />
                                 Nous avons rajouté un comparateur sur lequel on applique une tension de référence sur <Latex>{"$V_+$"}</Latex> qui représente le seuil
-                                pour déclencher une interruption de la présence d’un certain gaz.
+                                pour déclencher une interruption de la présence d’un certain gaz.&nbsp;
                                 <Latex>{"$V_-$"}</Latex> sera la tension du capteur amplifié.
                                 À l’état initial le <Latex>{"$V_- > V_+$"}</Latex>, on a un état 0 à la sortie du comparateur.
-                                À la présence d’un gaz, la tension du capteur chute <Latex>{"$V_- < V_+$"}</Latex> et l’état du comparateur
-                                est à 1 le microcontrôleur capture le front montant et déclenche l'interruption. <br /> <br />
-                                Enfin nous avons développé toutes les fonctionnalités pour traiter les données du capteur
-                                de gaz sur un microcontrôleur ESP32 et configurer le module LoRA (RN2483) pour communiquer
-                                le système avec les serveurs de “The things Network” <br />
-                                Le tout se trouve sur Github&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                À la présence d’un gaz, la tension du capteur chute, <Latex>{"$V_- < V_+$"}</Latex> l’état du comparateur
+                                passe à 1 le microcontrôleur capture le front montant et déclenche l'interruption. <br /> <br />
+
+                                L'intégralité du code et schémas se trouve sur GitHub&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <Button variant='secondary' href='https://github.com/MOSH-Insa-Toulouse/2021-2022-BOUKEZZATA-BERTON-MESLOUH.git' target="_blank" style={{ margin: '1em' }}> <BsGithub /> </Button>
 
                             </p>
@@ -396,6 +398,13 @@ const Smart_device = () => {
                         </Col>
                     </Row>
                 </div>
+                <h2 id="description" className='text-gray titre'>Revue générale</h2>
+                <p className="text-white">Dans l'ensemble, le module "Smart device" est l'un de mes préférés de l'année, principalement
+                    parce qu'il m'a permis de suivre l'ensemble du processus de création d'un capteur, du dépôt de nanoparticules à la
+                    conception de circuits analogiques et la PCB ce qui ce qui a renforcé mes compétences dans le hardware, développer
+                    des application pour interagir entre capteur et microcontrôleur ce qui à améliorer mes softskills, enfin acquérir
+                    une nouvelle compétences, la couche du middleware par la configuration d'un module de communication en entre un appareils
+                    et un serveur avec le protocole LoRaWAN</p>
             </Container>
         </div>
     );
