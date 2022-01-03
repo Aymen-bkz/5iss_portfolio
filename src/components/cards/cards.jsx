@@ -32,7 +32,7 @@ const Cards = () => {
             <section className="cards-wrapper">
                 <div className="card-grid-space">
                     <NavLink to='/smartDevice' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
-                        <div className='card-body' style={{ "--bg-img": `url(${SD})` }}>
+                        <div className='card-body-p' style={{ "--bg-img": `url(${SD})` }}>
                             <div>
                                 <h1>Smart Device</h1>
                                 <div className="tags">
@@ -44,7 +44,7 @@ const Cards = () => {
                 </div>
                 <div className="card-grid-space">
                     <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
-                        <div className='card-body' style={{ "--bg-img": `url(${Com})` }}>
+                        <div className='card-body-p' style={{ "--bg-img": `url(${Com})` }}>
                             <div>
                                 <h1>Communication</h1>
                                 <div className="tags">
@@ -56,7 +56,7 @@ const Cards = () => {
                 </div>
                 <div className="card-grid-space">
                     <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
-                        <div className='card-body' style={{ "--bg-img": `url(${IoT})` }}>
+                        <div className='card-body-p' style={{ "--bg-img": `url(${IoT})` }}>
                             <div>
                                 <h1>Middelware</h1>
                                 <div className="tags">
@@ -68,7 +68,7 @@ const Cards = () => {
                 </div>
                 <div className="card-grid-space">
                     <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
-                        <div className='card-body' style={{ "--bg-img": `url(${BigData})` }}>
+                        <div className='card-body-p' style={{ "--bg-img": `url(${BigData})` }}>
                             <div>
                                 <h1>Big data</h1>
                                 <div className="tags">
@@ -80,7 +80,7 @@ const Cards = () => {
                 </div>
                 <div className="card-grid-space">
                     <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
-                        <div className='card-body' style={{ "--bg-img": `url(${Innovation})` }}>
+                        <div className='card-body-p' style={{ "--bg-img": `url(${Innovation})` }}>
                             <div>
                                 <h1>Project Innovation</h1>
                                 <div className="tags">

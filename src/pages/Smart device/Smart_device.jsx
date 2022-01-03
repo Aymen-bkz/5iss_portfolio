@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { Button, Carousel, Col, Container, Image, Modal, ModalTitle, Row, Table } from 'react-bootstrap';
+import { Button, Card, Carousel, Col, Container, Image, Modal, ModalTitle, Row, Table } from 'react-bootstrap';
 import Latex from 'react-latex'
 import { BsClipboardData, BsGithub } from 'react-icons/bs'
 import Zoom from 'react-medium-image-zoom'
@@ -20,6 +20,7 @@ import GASWO from '../../assets/GASWO.JPG'
 import CMD_R_POLY from '../../assets/cmd_R_poly.JPG'
 import intterupt from '../../assets/intterupt.JPG'
 import PCB from '../../assets/PCB.JPG'
+import card_head from '../../assets/card-head.jpg'
 
 import './Smart_device.css'
 import { useEffect } from 'react';
@@ -53,48 +54,65 @@ const Smart_device = () => {
     return (
         <div className='smart-device'>
             <Container fluid={true} >
-                <animated.h2 style={props} className="text-orange titre">Smart Device</animated.h2>
+                <div className="d-flex justify-content-center">
+                    <Card className='header-card pt-3 mt-5'>
+                        <Card.Img variant="top" src={card_head} className='w-25 rounded mx-auto d-block' />
+                        <Card.Body className='text-center'>
+                            <h2 className='text-orange h2'>Smart Device</h2>
+                            <hr />
+                            <Card.Text className='text-gray'>
+                                Les dispositifs intelligents basés sur des capteurs sont partout dans notre vie quotidienne. Dans ce cours,
+                                nous suivrons le processus complet de création d'un capteur de gaz intelligent, depuis le dépôt de nanoparticules
+                                jusqu'à l'acquisition des données sur un microcontrôleur et la communication LoRa.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+                <h2 id="discroption" className='text-orange titre'>Description</h2>
                 <Row>
                     <Col sm={12}>
                         <p className='text-white intro'>
-                            Smart device est une unité de formation composée de quatre matières.
+                            Le  module "Smart Devices" regroupe quatre matière qui passent en revue les différentes étapes de la
+                            fabrication d'un capteur de gaz.
                         </p>
                         <br />
                         <p></p>
-                        <div className='maquette-smart-d'>
-                            <Table striped bordered hover responsive="sm">
+                        <div className=''>
+                            <Table striped bordered hover responsive>
                                 <thead>
                                     <tr>
                                         <th>Smart Device</th>
-                                        <th>Superviseur</th>
-                                        <th>Heures de formation</th>
-                                        <th>Organisme</th>
+                                        <th>Missions et Context</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th>fabrication et intégration de capteurs nanotechnologiques (AIME)</th>
-                                        <th>J.Grisolia</th>
-                                        <th>14H</th>
-                                        <th>INSA</th>
+                                        <th>Une expérience complète dans la salle blanche de l'AIME d'une semaine qui consiste aux différents
+                                            modules d'une demi-journée pendant lesquels nous avons pu superviser et manipuler les différents
+                                            processus impliqués dans la fabrication d'un capteur à nanoparticules. L'objectif final était de
+                                            fabriquer un capteur de gaz à partir de nanoparticules de tungstène, qui exprime une variation de
+                                            résistance lors de la détection de gaz spécifiques.
+                                        </th>
                                     </tr>
                                     <tr>
                                         <th><span>Microcontrollers and Open-Source Hardware, Embedded IA (Ms&OSH)</span></th>
-                                        <th>J.Grisolia, S. Lohez</th>
-                                        <th>25H</th>
-                                        <th>INSA</th>
+                                        <th>Projet réalisé en groupe de trois, consistant à utiliser tous les composants que nous avons construits
+                                            précédemment : le capteur de gaz et concevoir une PCB avec le circuit de traitement du signal, un
+                                            module de communication LoRa/LoRaWAN et un ESP32 pour transformer notre capteur en capteur
+                                            intelligent, envoyant des données vers le un serveur TTN.
+                                        </th>
                                     </tr>
                                     <tr>
                                         <th>Introduction aux capteurs</th>
-                                        <th>J.Grisolia</th>
-                                        <th>11,25H</th>
-                                        <th>INSA</th>
+                                        <th>Cours théoriques et travaux pratiques sur les concepts physiques des différents types de
+                                            capteurs et sur la façon de créer une fiche technique de capteur. Cela nous aidera à
+                                            construire la fiche technique de notre capteur de gaz.
+                                        </th>
                                     </tr>
                                     <tr>
                                         <th>Laboratoires d'électronique analogique</th>
-                                        <th>J.Grisolia</th>
                                         <th>2,5H</th>
-                                        <th>INSA</th>
                                     </tr>
                                 </tbody>
                             </Table>
@@ -338,7 +356,7 @@ const Smart_device = () => {
                                     PCB 3D model
                                 </Button>
 
-                                <Modal show={show} onHide={handleClose} fullscreen={true}>
+                                <Modal show={show} onHide={handleClose} size="lg">
                                     <Modal.Header closeButton>
                                         <Modal.Title>PCB 3D Model</Modal.Title>
                                     </Modal.Header>

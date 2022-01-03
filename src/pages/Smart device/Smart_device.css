@@ -18,10 +18,11 @@ element {
     margin: 0 auto;
 }
 
-.intro {
+
+/* .intro {
     width: 70vw;
     text-align: justify;
-}
+} */
 
 .table {
     border-color: #a9b1c9;
@@ -164,9 +165,9 @@ img {
     .smart-device {
         margin: 4em 0;
     }
-    .intro {
+    /* .intro {
         width: 90vw !important;
-    }
+    } */
     .MOSH {
         margin: 1em
     }
@@ -193,4 +194,10 @@ img {
         margin-bottom: 0;
     }
     /* carousel sensor */
+}
+
+@media screen and (min-width: 431px) {
+    .header-card {
+        width: 36em;
+    }
 }
