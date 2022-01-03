@@ -21,6 +21,7 @@ import CMD_R_POLY from '../../assets/cmd_R_poly.JPG'
 import intterupt from '../../assets/intterupt.JPG'
 import PCB from '../../assets/PCB.JPG'
 import card_head from '../../assets/card-head.jpg'
+import RN2483 from '../../assets/RN2483.JPG'
 
 import './Smart_device.css'
 import { useEffect } from 'react';
@@ -53,7 +54,7 @@ const Smart_device = () => {
 
     return (
         <div className='smart-device'>
-            <Container fluid={true} >
+            <Container >
                 <div className="d-flex justify-content-center">
                     <Card className='header-card pt-3 mt-5'>
                         <Card.Img variant="top" src={card_head} className='w-25 rounded mx-auto d-block' />
@@ -68,7 +69,7 @@ const Smart_device = () => {
                         </Card.Body>
                     </Card>
                 </div>
-                <h2 id="discroption" className='text-orange titre'>Description</h2>
+                <h2 id="description" className='text-orange titre'>Description</h2>
                 <Row>
                     <Col sm={12}>
                         <p className='text-white intro'>
@@ -112,7 +113,7 @@ const Smart_device = () => {
                                     </tr>
                                     <tr>
                                         <th>Laboratoires d'électronique analogique</th>
-                                        <th>Des travaux pratiques destinés à nous aider à concevoir le circuit analogique qui à exploiter
+                                        <th>Des travaux pratiques destinés à nous aider à concevoir le circuit analogique pour exploiter
                                             les valeurs de sortie de notre capteur  par le Convertisseur Analogique Numérique de notre
                                             microcontrôleur.
                                         </th>
@@ -120,24 +121,22 @@ const Smart_device = () => {
                                 </tbody>
                             </Table>
                         </div>
-                        <p className="text-white">
-                            <br />
-                            Le but ce module est de s’introduire dans le monde des objets connecté et de réaliser un projet sur lequel on
-                            introduit un capteur gaz fabriqué à l’AIME, concevoir un système électronique capable de commander le capteur,
-                            et communiqué l'ensemble des données collecté vers un serveur via le protocole de communication LoRA/LoRAWAN
-                        </p>
                     </Col>
                 </Row>
                 <animated.h2 style={props} className="text-orange titre">Fabrication et intégration de capteurs nanotechnologiques (AIME)</animated.h2>
-                <p className="text-white">Lors de notre stage à l’atelier Interuniversitaire Micro-nano Électronique (AIME) nous avons réalisé un capteur
-                    chimique à l’Oxyde de Tungstène <Latex>{"${WO_3}$"}</Latex> de type semi-conducteur puis de l’évaluer sous
-                    atmosphère gazeuse contrôlée pour en fournir la datasheet. <br /> Le procédé se décompose alors en 4
-                    étapes : <br />
+                <p className="text-white">
+                    La première expérience que nous avons eue dans le cadre du module
+                    "Smart Devices" a été le stage d'une semaine dans la salle blanche de l'AIME (Atelier Interuniversitaire Micro-nano Electronique).
+                    L'objectif final était de manipuler les différents processus impliqués dans la fabrication d'un capteur de nanotige de tungstem <Latex>{"${WO_3}$"}</Latex>
+                    qui exprime une variation de résistance lors de la détection de gaz spécifiques.
+                    <br />
+                    <br /> Le processus de fabrication est composé de 4 parties étapes : <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;• Elaboration du circuit intégré <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;• Synthèse des nanoparticules de <Latex>{"${WO_3}$"}</Latex> <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;• le dépot de la synthèse sur la puce <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;• Caractérisation électrique du capteur sous atmosphère contrôlée <br />
-                    Les capteurs chimiques ont plusieurs avantages notamment leur faible consommation d’énergie et coût. Par contre leur principal
+                    <br />
+                    Les capteurs chimiques présentent plusieurs avantages notamment leur faible consommation d’énergie et coût. Par contre leur principal
                     désavantage se trouve à leurs sélectivités, l’analyse d’un mélange de gaz nécessite plusieurs capteurs sensibles pour
                     chaque espèce gazeuse. </p>
                 <br />
@@ -179,12 +178,12 @@ const Smart_device = () => {
                             </Carousel>
                         </Col>
                         <Col md={6} className='d-flex justify-content-center align-items-center'>
-                            <p className='text-white'>La puce fabriquée est formée de 4 composants: <br />
+                            <p className='text-white'>La puce du capteur estS formée de 4 composants: <br />
                                 &nbsp;&nbsp;&nbsp;&nbsp;• Une résistance en aluminium pour mesurer la température de la puce <br />
                                 &nbsp;&nbsp;&nbsp;&nbsp;• Une résistance en polysilicium pour chauffer la surface de la puce <br />
                                 &nbsp;&nbsp;&nbsp;&nbsp;• Deux peignes interdigités formant deux condensateurs et qui deviendront des résistances
                                 apèrs de le dépot du <Latex>{"${WO_3}$"}</Latex> <br /> <br />
-                                Le procédé pour réaliser le circuit intégré du capteur du gaz: <br />
+                                Les étapes pour réaliser le circuit intégré du capteur du gaz: <br />
                                 &nbsp;&nbsp;&nbsp;&nbsp;• Oxydation de masquage (<Latex >{"$4500\\mathring{A}$"}</Latex>) <br />
                                 &nbsp;&nbsp;&nbsp;&nbsp;• Dépot du poly-silicium  (<Latex >{"$600nm$"}</Latex>) <br />
                                 &nbsp;&nbsp;&nbsp;&nbsp;• Gravure du polysilicium  (Photogravure n°1) <br />
@@ -201,18 +200,19 @@ const Smart_device = () => {
                         <Col md={6} className='d-flex justify-content-center align-items-center mb-4'>
                             <div className=''>
                                 <p className='text-white'>
-                                    Après la préparation de la synthèse <Latex>{"$WO_3$"}</Latex> à partir de l'hydrolyse et la condensation du <Latex>{"$Na_2WO_4$"}</Latex>,
+                                    La synthèse <Latex>{"$WO_3$"}</Latex> est produite à partir de l'hydrolyse et la condensation du <Latex>{"$Na_2WO_4$"}</Latex>,
                                     on récupère une solution jaune d’oxyde de tungstène, on recuit la solution au four à
                                     180°C pendants une heure laissant la croissance des nanotiges du <Latex>{"$WO_3$"}</Latex>.
-                                    <br />
-                                    On dépose une goutte de la synthèse WO3 sur le circuit intégré, ensuite on applique
-                                    le phénomène du diélectrophorèse en polarisant les électrodes du capteur avec signal alternatif sinusoïdal
-                                    à 100kHz et une amplitude de 10Vpp. Les nanotiges du WO3 s’accrochent sur les électrodes formant une résistance
-                                    réactive à la concentration d’un gaz spécifique.
-                                    <br />
-                                    A la fin nous avons appliqué des tests de performance du capteur sur des environnements de gaz différent
-                                    (ammoniac <Latex>{"$NH_3$"}</Latex>, éthanole <Latex>{"$C_2H_6O$"}</Latex> à 1000ppm), et réalisé une datasheet disponible en téléchargement
-                                    ci-dessous.
+                                    <br /> <br />
+                                    On dépose une goutte de la synthèse WO3 sur le circuit intégré, ensuite en appliquant le phénomène du diélectrophorèse
+                                    par la polarisation des électrodes du capteur avec signal alternatif sinusoïdal à 100kHz et une amplitude de 10Vpp.
+                                    Les nano-tiges du WO3 s’accrochent sur les électrodes formant une résistance  réactive à la concentration du gaz de
+                                    l'environnement.
+                                    <br /> <br />
+                                    A la fin du strage nous avons rassemblé les données de tous les capteurs. Avec les notions apprises au cours "Introduction aux capteurs"
+                                    nous avons pu rédiger une fiche technique. <br />
+                                    Vous pouvez trouver la fiche technique réalisée par mon groupe dans le lien ci-dessous : <br />
+
                                 </p>
                                 <br />
                                 <Button className='btn-datasheet' href={datasheet} target="_blank"> Datasheet <BsClipboardData /> </Button>
@@ -236,39 +236,17 @@ const Smart_device = () => {
                             </Carousel>
                         </Col>
                     </Row>
-                    <animated.h2 style={props} className="text-orange MOSH">Microcontrollers and Open-Source
-                        Hardware, Embedded IA (Ms&OSH)
-                    </animated.h2>
-                    <p className="text-white">
-                        Dans cette matière, nous avons travaillé sur du Open-Source hardware, l'ensemble des composants qui constituent un objet
-                        connecté (microcontrôleur, capteur, actionneur et modules de communication). Nous avons suivi des cours sur
-                        l’introduction du KiCAD pour la conception des circuits électroniques, une présentation de la syntaxe du langage de
-                        programmation et le framework de développement Arduino, et des éléments d'interfaçage Arduino/Processing et Android.
-                        <br />
-
-                        De mon parcours en système embarqué, je ne trouvais pas de difficulté sur l'avancement des tâches.
-                        C’est pour cette raison que j’ai décidé avec mon groupe de travailler en autonomie sur le projet. <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;• Nous avons étudié l'ensemble des fonctionnalités de notre système. <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;• définir le microcontrôleur qui répond au besoin du système. <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;• et concevoir les symboles et footprints de nos composants sur KiCAD. <br />
-                        La partie qui m’était nouvelle et plus intéressante c’était sur le module de communication LoRA (RN2483), j’ai appris à configurer
-                        le module sur un ESP32 et communiquer les données en radio ou à travers une Gateway vers un serveur TTN.
-
-                    </p>
-
-                    <animated.h2 style={props} className="text-orange titre">Introduction aux capteurs</animated.h2>
-
-
-                    <h4 className='text-light-gray'>Mon Rôle</h4>
+                    <animated.h2 style={props} className="text-orange MOSH">Laboratoires d'électronique analogique</animated.h2>
                     <Row>
                         <Col md={8} className='d-flex justify-content-center align-items-center'>
                             <p className='text-white'>
-                                Le projet a été réalisé en deux étapes : <br />
-                                Tout d’abord, mon rôle était de concevoir le schéma électronique.
-                                Le capteur de gaz étant une résistance sensible à la concentration du gaz et elle est de l’ordre
+                                Les laboratoires d'électronique analogique était des travaux pratiques pour concevoir un circuit électronique qui
+                                serait capable de données des valeur éxploitable du capteur de gaz par le convertisseur Analogique
+                                Numérique du microcontrôleur.
+                                Le capteur de gaz étant une résistance sensible à la concentration du gaz deplus il est de l’ordre
                                 des gigaohms, un diviseur de tension ne serait pas efficace pour que le convertisseur Analogique
                                 Numérique (ADC) du microcontrôleur puisse lire les données. On a donc utilisé un amplificateur
-                                opérationnel (LTC1050) avec un faible offset pour amplifier le courant passant par le capteur
+                                opérationnel (LTC1050) avec une faible tension offset pour amplifier le courant passant par le capteur
                                 et filtrer le bruit. <br />
                                 La valeur de la résistance du capteur: <br />
                                 <Latex displayMode={true}>{"$R_{sensor} = (1+\\frac{R_9}{R_8})\\cdot \\frac{V_{cc}}{V_{adc}}-R_6-R_7  $"}</Latex>
@@ -278,6 +256,39 @@ const Smart_device = () => {
                             <Zoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
                                 <div className='img-div'>
                                     <Image src={LTC1050} className='w-100' />
+                                    {/* <BsZoomIn className='zoom-icon' /> */}
+                                </div>
+
+                            </Zoom>
+                        </Col>
+                    </Row>
+                    <animated.h2 style={props} className="text-orange titre">Microcontrollers and Open-Source
+                        Hardware, Embedded IA (Ms&OSH)
+                    </animated.h2>
+                    <p className="text-white">
+                        Une fois le capteur est fabriqué, Nous somme passé à la Conception du circuit électronique,
+                        Nous avions beaucoup de liberté, car nous pouvions choisir entre suivre les laboratoires dirigés ou lancer le projet .
+                        Avec mon équipe composé de AE et MSIOT nous somme décidé d'avancé sur le projet en autonomoie.
+                        <br /><br />
+                        On a divisé le travail en partie:
+                    </p>
+
+                    <Row>
+                        <Col md={8} className='d-flex justify-content-center'>
+                            <p className='text-white'>
+                                <br />
+                                La première partie coté software, on a commencé par la configuration du module LoRa RN2482,
+                                avec les instructions du constructeur. On avait réussi à établir une communication radio
+                                avec la couche physique entre deux module LoRa et transmettre de données d'un capteur
+                                de gaz Grove. Ensuite nous avons utilisé la bibliothèque <span><a href="https://github.com/jpmeijers/RN2483-Arduino-Library">jpmeijers/RN2483-Arduino-Library</a> </span> 
+                                 pour configurer le RN2483 pour établir une communication avec un serveur TTN avec la couche MAC du module (LoRaWAN)
+
+                            </p>
+                        </Col>
+                        <Col md={4}>
+                            <Zoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
+                                <div className='img-div'>
+                                    <Image src={RN2483} className='w-100' />
                                     {/* <BsZoomIn className='zoom-icon' /> */}
                                 </div>
 

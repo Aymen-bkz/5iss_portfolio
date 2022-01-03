@@ -5,7 +5,7 @@ element {
 }
 
 .smart-device {
-    margin-left: 200px;
+    margin: 0 50px 0 235px;
 }
 
 .table>:not(caption)>*>* {
@@ -95,7 +95,7 @@ img {
 }
 
 .carousel-indicators {
-    bottom: -8em;
+    bottom: -6em;
     justify-content: space-evenly;
     margin-right: 0;
     margin-left: 0;

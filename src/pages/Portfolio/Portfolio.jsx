@@ -11,6 +11,7 @@ const Portfolio = () => {
         to: { opacity: 1 },
         from: { opacity: 0 },
         delay: 100,
+        config: { duration: 1000 },
     })
     return (
         <div className='portfolio'>
