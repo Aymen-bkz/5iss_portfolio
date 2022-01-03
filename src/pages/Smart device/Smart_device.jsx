@@ -112,7 +112,10 @@ const Smart_device = () => {
                                     </tr>
                                     <tr>
                                         <th>Laboratoires d'électronique analogique</th>
-                                        <th>2,5H</th>
+                                        <th>Des travaux pratiques destinés à nous aider à concevoir le circuit analogique qui à exploiter
+                                            les valeurs de sortie de notre capteur  par le Convertisseur Analogique Numérique de notre
+                                            microcontrôleur.
+                                        </th>
                                     </tr>
                                 </tbody>
                             </Table>
