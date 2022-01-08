@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { Button, Card, Carousel, Col, Container, Image, Modal, ModalTitle, Row, Table } from 'react-bootstrap';
+import { Button, Card, Carousel, Col, Container, Image, Modal, Row, Table } from 'react-bootstrap';
 import Latex from 'react-latex'
 import { BsClipboardData, BsGithub } from 'react-icons/bs'
 import Zoom from 'react-medium-image-zoom'
@@ -57,7 +57,7 @@ const Smart_device = () => {
             <Container >
                 <div className="d-flex justify-content-center">
                     <Card className='header-card pt-3 mt-5'>
-                        <Card.Img variant="top" src={card_head} className='w-25 rounded mx-auto d-block' />
+                        <Card.Img variant="top" src={card_head} className='rounded mx-auto d-block w-25'/>
                         <Card.Body className='text-center'>
                             <h2 className='text-orange h2'>Smart Device</h2>
                             <hr />
@@ -73,23 +73,23 @@ const Smart_device = () => {
                 <Row>
                     <Col sm={12}>
                         <p className='text-white intro'>
-                            Le  module "Smart Devices" regroupe quatre matière qui passent en revue les différentes étapes de la
-                            fabrication d'un capteur de gaz.
+                            Le  module "Smart Devices" regroupe quatre matières qui passent en revue les différentes étapes de la
+                            fabrication d'un capteur de gaz à la salle blanche de l'Atelier Interuniversitaire Micro-nano Electronique (AIME).
                         </p>
                         <br />
                         <p></p>
                         <div className=''>
-                            <Table striped bordered hover responsive>
+                            <Table striped hover responsive>
                                 <thead>
                                     <tr>
-                                        <th>Smart Device</th>
-                                        <th>Missions et Context</th>
+                                        <th style={{ borderTopLeftRadius: "1em" }}>Smart Device</th>
+                                        <th style={{ borderTopRightRadius: "1em" }}>Missions et Context</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th>fabrication et intégration de capteurs nanotechnologiques (AIME)</th>
-                                        <th>Une expérience complète dans la salle blanche de l'AIME d'une semaine qui consiste aux différents
+                                        <th >fabrication et intégration de capteurs nanotechnologiques (AIME)</th>
+                                        <th >Une expérience complète dans la salle blanche de l'AIME d'une semaine qui consiste aux différents
                                             modules d'une demi-journée pendant lesquels nous avons pu superviser et manipuler les différents
                                             processus impliqués dans la fabrication d'un capteur à nanoparticules. L'objectif final était de
                                             fabriquer un capteur de gaz à partir de nanoparticules de tungstène, qui exprime une variation de
@@ -112,8 +112,8 @@ const Smart_device = () => {
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th>Laboratoires d'électronique analogique</th>
-                                        <th>Des travaux pratiques destinés à nous aider à concevoir le circuit analogique pour exploiter
+                                        <th style={{borderBottomLeftRadius : "0.5em"}}>Laboratoires d'électronique analogique</th>
+                                        <th style={{borderBottomRightRadius : "0.5em"}}>Des travaux pratiques destinés à nous aider à concevoir le circuit analogique pour exploiter
                                             les valeurs de sortie de notre capteur  par le Convertisseur Analogique Numérique de notre
                                             microcontrôleur.
                                         </th>
@@ -121,6 +121,13 @@ const Smart_device = () => {
                                 </tbody>
                             </Table>
                         </div>
+                        <p className="text-white">
+                            Après avoir réalisé avec mon groupe le capteur de gaz, nous avons divisé les tâches efficacement pour la partie
+                            Ms&OSH. Je me suis naturellement chargé de la conception du circuit électronique puis du design et du routage du circuit
+                            imprimé correspondant. En effet, venant de la filière d'électronique automatique, je possède les compétences nécessaires
+                            pour prendre en main ces tâches. De plus, mon stage de quatrième année axé dans la création de PCB m'a permis d'acquerir
+                            de l'expérience et développer des compétences dans le hardware.
+                        </p>
                     </Col>
                 </Row>
                 <h2 id="description" className='text-gray titre'>Partie Technique</h2>
@@ -211,8 +218,8 @@ const Smart_device = () => {
                                     l'environnement.
                                     <br /> <br />
                                     A la fin du strage nous avons rassemblé les données de tous les capteurs. Avec les notions apprises au cours "Introduction aux capteurs"
-                                    nous avons pu rédiger une fiche technique. <br />
-                                    Vous pouvez trouver la fiche technique réalisée par mon groupe dans le lien ci-dessous : <br />
+                                    j'ai pu rédiger une fiche technique. <br />
+                                    Vous pouvez trouver la fiche technique réalisée dans le lien ci-dessous : <br />
 
                                 </p>
                                 <br />
@@ -393,18 +400,28 @@ const Smart_device = () => {
                                     <Image src={PCB} className='w-100' />
                                     {/* <BsZoomIn className='zoom-icon' /> */}
                                 </div>
-
                             </Zoom>
                         </Col>
                     </Row>
                 </div>
+                <h2 id="description" className='text-gray titre'>Challenges rencontrés</h2>
+                <p className="text-white">
+                    Lors de ce projet j'ai rencontré des difficultés techniques principalement avec le module LoRa car je n'étais pas
+                    familier avec cette technologie.
+                    Pour surmonter cette difficulté, je me suis documenté grace à la datasheet du module RN2483, et ai envoyé des
+                    commandes de base au module via un moniteur serie pour voir sa réponse. A force de faire des essais j'ai pu appréhender
+                    le fonctionnement global du loRa sur le framework Aduino.
+                </p>
                 <h2 id="description" className='text-gray titre'>Revue générale</h2>
-                <p className="text-white">Dans l'ensemble, le module "Smart device" est l'un de mes préférés de l'année, principalement
-                    parce qu'il m'a permis de suivre l'ensemble du processus de création d'un capteur, du dépôt de nanoparticules à la
-                    conception de circuits analogiques et la PCB ce qui ce qui a renforcé mes compétences dans le hardware, développer
-                    des application pour interagir entre capteur et microcontrôleur ce qui à améliorer mes softskills, enfin acquérir
-                    une nouvelle compétences, la couche du middleware par la configuration d'un module de communication en entre un appareils
-                    et un serveur avec le protocole LoRaWAN</p>
+                <p className="text-white">Dans l'ensemble, le module "Smart device" est l'un de mes modules préférés de l'année,
+                    principalement parce qu'il m'a permis de suivre l'ensemble du processus de création d'un capteur de gaz, du dépôt
+                    de nanoparticules à la conception du circuit analogique et routage du PCB, ce qui a renforcé mes compétences en
+                    Hardware.
+                    Le développement d'applications pour interagir entre capteurs et microcontrôleurs a amélioré mes compétences en softskills.
+                    Enfin, j'ai acquis une nouvelle compétence, la couche middleware, en configurant un module de communication entre 
+                    les appareils et les serveurs avec le protocole LoRaWAN.
+
+                </p>
             </Container>
         </div>
     );

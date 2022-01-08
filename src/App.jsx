@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Portfolio from './pages/Portfolio/Portfolio';
 import SmartDevice from './pages/Smart device/Smart_device'
+import Communication from './pages/Communication/Communication';
 
 import Navbar from './components/navbar/navbar';
 import Particles_compo from './components/background/background';
@@ -20,6 +21,7 @@ function App() {
                     <Route path='/' element={<Home/>} />
                     <Route path='/portfolio' element={<Portfolio/>} />
                     <Route path='/smartDevice' element={<SmartDevice/>} />
+                    <Route path='/communication' element={<Communication/>} />
                 </Routes>
             </BrowserRouter>
         </div>

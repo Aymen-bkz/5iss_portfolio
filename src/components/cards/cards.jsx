@@ -22,7 +22,7 @@ const Cards = () => {
             })
             .add({
                 targets: '.cards-wrapper .card-grid-space',
-                translateY: ["25em", 0],
+                translateY: ["19em", 0],
                 translateZ: 0,
                 delay: (el, i) => 200 * i
             });
@@ -43,8 +43,8 @@ const Cards = () => {
                     </NavLink>
                 </div>
                 <div className="card-grid-space">
-                    <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
-                        <div className='card-body-p' style={{ "--bg-img": `url(${Com})` }}>
+                    <NavLink to='/communication' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
+                        <div className='card-body-p' style={{ "--bg-img": `url(${IoT})` }}>
                             <div>
                                 <h1>Communication</h1>
                                 <div className="tags">
@@ -56,7 +56,7 @@ const Cards = () => {
                 </div>
                 <div className="card-grid-space">
                     <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
-                        <div className='card-body-p' style={{ "--bg-img": `url(${IoT})` }}>
+                        <div className='card-body-p' style={{ "--bg-img": `url(${Com})` }}>
                             <div>
                                 <h1>Middelware</h1>
                                 <div className="tags">

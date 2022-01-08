@@ -17,3 +17,13 @@ code {
 .ref {
     font-family: 'KaTeX_Main', sans-serif;
 }
+
+element {
+    --text-color: #FFAA4C;
+    --text-gray: #8892b0;
+    --text-light-gray: #ccd6f6;
+}
+
+tbody tr {
+    border-style: inherit !important;
+}
