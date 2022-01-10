@@ -52,7 +52,11 @@ img {
 }
 
 .titre {
-    margin: 2em
+    margin: 1em 1em
+}
+
+.sous-titre {
+    margin: 1em 2em
 }
 
 .zoom-icon {

@@ -59,7 +59,7 @@ const Smart_device = () => {
                     <Card className='header-card pt-3 mt-5'>
                         <Card.Img variant="top" src={card_head} className='rounded mx-auto d-block w-25'/>
                         <Card.Body className='text-center'>
-                            <h2 className='text-orange h2'>Smart Device</h2>
+                            <h2 className='text-orange h2 sous-titre'>Smart Device</h2>
                             <hr />
                             <Card.Text className='text-gray'>
                                 Les dispositifs intelligents basés sur des capteurs sont partout dans notre vie quotidienne. Dans ce cours,
@@ -131,7 +131,7 @@ const Smart_device = () => {
                     </Col>
                 </Row>
                 <h2 id="description" className='text-gray titre'>Partie Technique</h2>
-                <animated.h2 style={props} className="text-orange titre">Fabrication et intégration de capteurs nanotechnologiques (AIME)</animated.h2>
+                <animated.h2 style={props} className="text-orange sous-titre">Fabrication et intégration de capteurs nanotechnologiques (AIME)</animated.h2>
                 <p className="text-white">
                     La première expérience que nous avons eue dans le cadre du module
                     "Smart Devices" a été le stage d'une semaine dans la salle blanche de l'AIME (Atelier Interuniversitaire Micro-nano Electronique).
@@ -244,7 +244,7 @@ const Smart_device = () => {
                             </Carousel>
                         </Col>
                     </Row>
-                    <animated.h2 style={props} className="text-orange MOSH">Laboratoires d'électronique analogique</animated.h2>
+                    <animated.h2 style={props} className="text-orange MOSH sous-titre">Laboratoires d'électronique analogique</animated.h2>
                     <Row>
                         <Col md={8} className='d-flex justify-content-center align-items-center'>
                             <p className='text-white'>
@@ -270,7 +270,7 @@ const Smart_device = () => {
                             </Zoom>
                         </Col>
                     </Row>
-                    <animated.h2 style={props} className="text-orange titre">Microcontrollers and Open-Source
+                    <animated.h2 style={props} className="text-orange sous-titre">Microcontrollers and Open-Source
                         Hardware, Embedded IA (Ms&OSH)
                     </animated.h2>
                     <p className="text-white">
