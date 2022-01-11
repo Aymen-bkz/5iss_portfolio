@@ -57,7 +57,7 @@ const Smart_device = () => {
             <Container >
                 <div className="d-flex justify-content-center">
                     <Card className='header-card pt-3 mt-5'>
-                        <Card.Img variant="top" src={card_head} className='rounded mx-auto d-block w-25'/>
+                        <Card.Img variant="top" src={card_head} className='rounded mx-auto d-block w-25' />
                         <Card.Body className='text-center'>
                             <h2 className='text-orange h2 sous-titre'>Smart Device</h2>
                             <hr />
@@ -112,8 +112,8 @@ const Smart_device = () => {
                                         </th>
                                     </tr>
                                     <tr>
-                                        <th style={{borderBottomLeftRadius : "0.5em"}}>Laboratoires d'électronique analogique</th>
-                                        <th style={{borderBottomRightRadius : "0.5em"}}>Des travaux pratiques destinés à nous aider à concevoir le circuit analogique pour exploiter
+                                        <th style={{ borderBottomLeftRadius: "0.5em" }}>Laboratoires d'électronique analogique</th>
+                                        <th style={{ borderBottomRightRadius: "0.5em" }}>Des travaux pratiques destinés à nous aider à concevoir le circuit analogique pour exploiter
                                             les valeurs de sortie de notre capteur  par le Convertisseur Analogique Numérique de notre
                                             microcontrôleur.
                                         </th>
@@ -418,7 +418,7 @@ const Smart_device = () => {
                     de nanoparticules à la conception du circuit analogique et routage du PCB, ce qui a renforcé mes compétences en
                     Hardware.
                     Le développement d'applications pour interagir entre capteurs et microcontrôleurs a amélioré mes compétences en softskills.
-                    Enfin, j'ai acquis une nouvelle compétence, la couche middleware, en configurant un module de communication entre 
+                    Enfin, j'ai acquis une nouvelle compétence, la couche middleware, en configurant un module de communication entre
                     les appareils et les serveurs avec le protocole LoRaWAN.
 
                 </p>

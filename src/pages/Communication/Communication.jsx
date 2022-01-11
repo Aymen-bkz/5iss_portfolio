@@ -9,6 +9,8 @@ import SDR_2 from '../../assets/SDR_2.JPG'
 import SDR_3 from '../../assets/SDR_3.JPG'
 import NB_IOT from '../../assets/NB_IOT.JPG'
 import WSN from '../../assets/WSN.JPG'
+import health from '../../assets/5g_health.JPG'
+import SDN from '../../assets/SDN.JPG'
 
 
 import './Communication.css'
@@ -19,6 +21,7 @@ import Rapport_NB_IoT from '../../assets/Rapport-NB-IoT.pdf'
 import NB_Iot from '../../assets/NB_Iot.pdf'
 import rapport_wsn from '../../assets/rapport_wsn.pdf'
 import wsn from '../../assets/WSN.pdf'
+import health_pdf from '../../assets/impact_5G_sante.pdf'
 
 
 const Communication = () => {
@@ -195,6 +198,60 @@ const Communication = () => {
                     </Col>
                 </Row>
                 <h2 className="text-orange sous-titre">from 3G to 5G</h2>
+                <Row>
+                    <Col md={8} className='d-flex align-items-center'>
+                        <p className="text-white">
+                            Ce cours nous a permis de découvrir les générations de réseaux mobiles de la 3G à la 5G.
+                            Le devoir consistait en une présentation par groupe de deux sur un sujet au choix sur la technologie 5G.
+                            Notre sujet portait sur l'impact de la 5G sur la santé.
+                        </p>
+                    </Col>
+                    <Col md={4} className='d-flex flex-column justify-content-around'>
+                        <Zoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
+                            <img src={health} alt="5g" className='w-100 d-blick mx-auto' />
+                        </Zoom>
+                        <Button href={health_pdf} target="Blank_" className='mt-4 mb-4'> Impact de la 5G sur la santé</Button>
+                    </Col>
+                </Row>
+                <h2 className="text-orange sous-titre">Réseaux émergents</h2>
+                <Row>
+                    <Col md={8} className='d-flex align-items-center'>
+                        <p className="text-white">
+                            Les cours sur les réseaux émergents étaient une introduction aux réseaux définis par logiciel. L'objectif
+                            principal était de comprendre les nouveaux réseaux émergents qui sont très utiles dans un contexte IoT, et de nous
+                            faire manipuler ces réseaux. Les réseaux définis par logiciel nous permettent de gérer le réseau
+                            de manière logicielle. <br /> <br />
+                            Nous avons eu deux travaux pratiques qui visaient à Illustrer les principes de fonctionnement
+                            d’un réseau conforme au paradigme SDN/Openflow. <br />
+                            Le but du premier TP est de prendre en main le fonctionnement
+                            d’un réseau SDN/Openflow pour déployer au final un réseau de constitué de 4 commutateurs Pica 8 compatible
+                            Openflow et d’un contrôleur Openflow Ryu. <br />
+                            Le dernier TP, nous avons découvert comment developper un contrôleur SDN en python.
+
+                        </p>
+                    </Col>
+                    <Col md={4} className='d-flex align-items-center'>
+                        <Zoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
+                            <img src={SDN} alt="5g" className='w-100 d-blick mx-auto' />
+                        </Zoom>
+                    </Col>
+                </Row>
+                <h2 id="description" className='text-gray titre'>Challenges rencontrés</h2>
+                <p className="text-white">
+                    Les difficultés que j'ai rencontrées durant le module de communication se trouvaient dans la partie recherche sur
+                    les réseaux de capteurs sans fil. La documentation était très vaste, en particulier les couches MAC, avec le peu de
+                    connaissances, il s'agissait de notions techniques et spécialisées qu'il était nécessaire de comprendre en autonomie.
+                </p>
+                <h2 id="description" className='text-gray titre'>Revue générale</h2>
+                <p className="text-white">
+                    Le module sur la communication était très complet et varié. Comme je viens d'une formation en électronique
+                    automatique, Système embarqué m'a permis d'acquérir des compétences en hardware et en logiciel embarqué. A travers
+                    ce module j'ai appris de nouvelles compétences pour communiquer mes futurs systèmes notamment sur le choix des
+                    protocoles en fonction des contraintes que ce soit en termes de consommation d'énergie, de portée, de fréquences,
+                    de bande passante, de sécurité, etc.
+                    Ce que j'ai vraiment apprécié dans ce module, c'est qu'il a abordé l'IoT sous différents angles, à la fois techniques
+                    et théoriques, pour nous donner une image claire et complète de l'état actuel de l'Internet des objets.
+                </p>
             </Container>
         </div>
     );
