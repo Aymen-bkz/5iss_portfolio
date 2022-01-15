@@ -8,6 +8,7 @@ import Communication from './pages/Communication/Communication';
 
 import Navbar from './components/navbar/navbar';
 import Particles_compo from './components/background/background';
+import Hackathon from './pages/Hackathon/Hackathon';
 
 
 
@@ -22,6 +23,7 @@ function App() {
                     <Route path='/portfolio' element={<Portfolio/>} />
                     <Route path='/smartDevice' element={<SmartDevice/>} />
                     <Route path='/communication' element={<Communication/>} />
+                    <Route path='/hackathon' element={<Hackathon />} />
                 </Routes>
             </BrowserRouter>
         </div>

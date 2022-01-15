@@ -218,7 +218,8 @@ const Communication = () => {
                     <Col md={8} className='d-flex align-items-center'>
                         <p className="text-white">
                             Les cours sur les réseaux émergents étaient une introduction aux réseaux définis par logiciel. L'objectif
-                            principal était de comprendre les nouveaux réseaux émergents qui sont très utiles dans un contexte IoT, et de nous
+                            principal était de comprendre les nouveaux réseaux émergents qui sont très utiles dans un contexte IoT, 
+                            et de nous
                             faire manipuler ces réseaux. Les réseaux définis par logiciel nous permettent de gérer le réseau
                             de manière logicielle. <br /> <br />
                             Nous avons eu deux travaux pratiques qui visaient à Illustrer les principes de fonctionnement
