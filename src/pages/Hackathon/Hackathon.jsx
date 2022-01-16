@@ -102,13 +102,59 @@ const Hackathon = () => {
                 <h2 id="technique" className='text-gray titre'>Partie Technique</h2>
                 <Row>
                     <Col md={6}>
+                        <p className="text-white">
+                            Tout d'abord, voici un petit résumé du projet :
+                            Nous avons deux capteurs ultrason et un GPS Sim28 connectés à un ESP8622, le tout embarqué dans un vélo.
+                            Le vélo collecte des informations sur le trafic routier et les stocke dans la mémoire RAM du microcontrôleur.
+                            Une fois qu'il entre dans une zone où il peut se connecter avec un Wifi. Il envoie toutes les informations
+                            au serveur MN-CSE (Middle Node - Common Service Entites) pour traiter et filtrer les données.
+                            Toutes les informations sont accessibles depuis une page web sur les zones avec une carte. L'utilisateur
+                            peut ensuite choisir de conserver les informations, trier les données pour protéger la confidentialité
+                            ou les transmettre au serveur IN-CSE (Infrastructure Node - Common Service Entity). <br />
+                            Pour notre test, nous avons installé le serveur MN-CSE sur un PC, l'IN-SCE sur un Raspberry et nous avons utilisé
+                            un réseau local.
 
+                            <br /> <br />
+                            Ce projet a été un grand défi technique pour moi car j'ai dû coordonner les deux capteurs à ultrasons de
+                            manière simultanée pour pouvoir mesurer la distance et calculer la vitesse du véhicule. J'ai rencontré
+                            de nombreuses difficultés pour capturer la distance car si aucun objet n'était détecté par les deux capteurs
+                            à ultrasons, ils généraient un retard sur le système. En revanche, j'ai pu écrire la librairie de vitesse.
+                            Un autre problème concernait le GPS. L'ESP8266 ne pouvait pas lire les trames du GPS et les capteurs
+                            ultrasoniques en même temps car la fonction de lecture de l'ESP8266 sur le port série du GPS attendait
+                            d'avoir la trame complète, ce qui générait un grand retard et réduisait la fréquence à 5Hz, qui est
+                            la fréquence d'envoi du GPS. <br /> <br />
+
+
+                            Pour résoudre ce problème, j'ai dû faire la commuter entre le GPS et le capteur à ultrasons. Le système
+                            commence à mesurer la vitesse dès que le GPS est relié aux signaux satellites. Si l'ultrason détecte une
+                            vitesse élevée d'un véhicule, il stocke les données avec la position GPS dans une variable sous forme de
+                            paquet JSON.
+                            dès que le vélo dispose d'une connexion wifi, elle envoie tous les paquets de données JSON au serveur MN-CSE
+                            avec des requetés POST.
+                        </p>
                     </Col>
-                    <Col md={6}>
-                        <img src={tech} alt="AJATA" className='w-100' />
+                    <Col md={6} >
+                        <img src={tech} alt="AJATA" className='w-100 mt-2' />
+                        <Player className="mt-5">
+                            <source src={video} />
+                        </Player>
                     </Col>
                 </Row>
+                <h2 id="description" className='text-gray titre'>Partie analytique</h2>
+                <p className="text-white">
+                    Hackaton a été une expérience formidable pour moi et l'un des projets les plus important du programme "Innovative Smart Systems".
+                    Non seulement il a mobilisé de nouvelles compétences et connaissances, mais le délai et le calendrier étaient extrêmement serrés.
+                    J'ai eu la chance d'avoir une équipe qui s'est beaucoup investie dans l'événement et qui était prête à remplir les tâches tout
+                    au long de la compétition. <br />
+                    Un événement aussi intense que celui-ci requiert de nombreuses compétences clés en matière d'ingénierie, à commencer par
+                    la recherche d'une idée innovante, qui a été la partie la plus difficile, et surtout la faisabilité de la partie
+                    technique comme la mesure de la vitesse d'un objet avec 2 capteurs à ultrasons. <br />
+                    La principale conclusion que je tire de cette expérience est l'importance de la gestion du temps et la stratégie de
+                    gestion est encore plus importante.
+                    Grâce à une expérience comme celle-ci, je peux m'habituer à ces contraintes et mieux préparer et gérer des projets
+                     pour ma future carrier professionnel.
 
+                </p>
             </Container>
         </div>
     );
