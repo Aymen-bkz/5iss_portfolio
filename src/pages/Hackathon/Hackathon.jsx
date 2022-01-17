@@ -142,7 +142,7 @@ const Hackathon = () => {
                 </Row>
                 <h2 id="description" className='text-gray titre'>Partie analytique</h2>
                 <p className="text-white">
-                    Hackaton a été une expérience formidable pour moi et l'un des projets les plus important du programme "Innovative Smart Systems".
+                    Le Hackaton a été une expérience formidable pour moi et l'un des projets les plus important du programme "Innovative Smart Systems".
                     Non seulement il a mobilisé de nouvelles compétences et connaissances, mais le délai et le calendrier étaient extrêmement serrés.
                     J'ai eu la chance d'avoir une équipe qui s'est beaucoup investie dans l'événement et qui était prête à remplir les tâches tout
                     au long de la compétition. <br />

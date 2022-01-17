@@ -7,6 +7,18 @@
     pointer-events: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+}
+
+a:hover {
+    color: #f1612a !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;

@@ -82,9 +82,9 @@ const Cards = () => {
                     <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                         <div className='card-body-p' style={{ "--bg-img": `url(${Innovation})` }}>
                             <div>
-                                <h1>Project Innovation</h1>
+                                <h1>innovation</h1>
                                 <div className="tags">
-                                    <div className="tag">Innovation</div>
+                                    <div className="tag">innovation & humanity</div>
                                 </div>
                             </div>
                         </div>

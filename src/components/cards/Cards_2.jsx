@@ -29,7 +29,7 @@ const Cards_2 = () => {
             <div className='Cards-comp'>
                 <section className="cards-wrapper">
                     <div className="card-grid-space">
-                        <NavLink to='/Hackathon' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
+                        <NavLink to='/hackathon' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                             <div className='card-body-p' style={{ "--bg-img": `url(${hackathon})` }}>
                                 <div>
                                     <h1>Hackathon</h1>
@@ -44,9 +44,9 @@ const Cards_2 = () => {
                         <NavLink to='/project' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                             <div className='card-body-p' style={{ "--bg-img": `url(${project})` }}>
                                 <div>
-                                    <h1>Hackathon</h1>
+                                    <h1>Innovative project</h1>
                                     <div className="tags">
-                                        <div className="tag">Hackathon</div>
+                                        <div className="tag">Project & Portfolio</div>
                                     </div>
                                 </div>
                             </div>
