@@ -55,19 +55,19 @@ const Cards = () => {
                     </NavLink>
                 </div>
                 <div className="card-grid-space">
-                    <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
+                    <NavLink to='/middleware' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                         <div className='card-body-p' style={{ "--bg-img": `url(${Com})` }}>
                             <div>
-                                <h1>Middelware</h1>
+                                <h1>Middleware</h1>
                                 <div className="tags">
-                                    <div className="tag">Middelware and Service</div>
+                                    <div className="tag">Middleware and Service</div>
                                 </div>
                             </div>
                         </div>
                     </NavLink>
                 </div>
                 <div className="card-grid-space">
-                    <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
+                    <NavLink to='/bigData' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                         <div className='card-body-p' style={{ "--bg-img": `url(${BigData})` }}>
                             <div>
                                 <h1>Big data</h1>
@@ -79,7 +79,7 @@ const Cards = () => {
                     </NavLink>
                 </div>
                 <div className="card-grid-space">
-                    <NavLink to='/' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
+                    <NavLink to='/innovation' tag={Link} style={{ color: 'inherit', textDecoration: 'inherit' }}>
                         <div className='card-body-p' style={{ "--bg-img": `url(${Innovation})` }}>
                             <div>
                                 <h1>innovation</h1>

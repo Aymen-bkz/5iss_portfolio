@@ -10,6 +10,7 @@ import Navbar from './components/navbar/navbar';
 import Particles_compo from './components/background/background';
 import Hackathon from './pages/Hackathon/Hackathon';
 import Project from './pages/Project/Project';
+import Middleware from './pages/Middleware/Middleware';
 
 
 
@@ -26,6 +27,7 @@ function App() {
                     <Route path='/communication' element={<Communication/>} />
                     <Route path='/hackathon' element={<Hackathon />} />
                     <Route path='/project' element={<Project />} />
+                    <Route path='/middleware' element={<Middleware />} />
                 </Routes>
             </BrowserRouter>
         </div>

@@ -125,7 +125,7 @@ const Project = () => {
             </p>
             <h2 id="technique" className='text-gray titre'>Partie Technique</h2>
             <Row>
-                <Col md={8} className="d-flex align-items-center"> 
+                <Col md={8} className="d-flex align-items-center">
                     <p className="text-white text-wrap">
                         Comme il était dit précédemment le projet intégrateur est la poursuit du projet hackathon, sauf que nous avons repris toutes
                         les parties qui n'étaient pas pratiques, notamment la partie OM2M.Déployer des serveurs MN-CSE pour chaque foyer n'est pas
@@ -166,9 +166,24 @@ const Project = () => {
                     <ImageZoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)' className="justify-content-end">
                         <img src={db} alt="db" className='w-100 mt-5' />
                     </ImageZoom>
-
                 </Col>
             </Row>
+            <h2 id="description" className='text-gray titre'>Partie analytique</h2>
+            <p className="text-white">
+                Pour ce module, le projet innovant résume vraiment une grande partie de l'année pour moi, je me suis vraiment investi dans
+                le projet innovant, car c'est un projet qui a commencé avec une idée simple et qui s'est terminé avec un prototype sur
+                un vélo que nous avons expérimenté. Le projet en lui-même m'a beaucoup intéressé car il passait par tous les points d'un
+                vrai projet d'entreprise, concevoir un circuit électronique, puis embarquer le logiciel pour gérer le système, communiquer
+                toutes les données avec les protocoles des objets connectés, et enfin développer une application qui sera l'interface
+                entre la machine et l'utilisateur. Bien que le plus grand avantage pour ce projet a été la décision de garder le même
+                projet du Hackathon. <br />
+                Les cours d'anglais ont été très importants, ils m'ont donné beaucoup plus de confiance et m'ont permis de m'exprimer et de
+                présenter le projet avec la langue la plus employée, surtout dans le domaine de l'ingénierie.
+                <br /> 
+                {/* Enfin, le portfolio a été un véritable défi pour moi et une expérience très enrichissante. J'ai fait le choix de développer
+                le portfolio en tant que site web avec le framework REACT en passant par toutes les phases, alors que je suis formé aux systèmes
+                embarqués, mais cela ne m'a pas empêché d'investir beaucoup de temps pour finalement réussir à le faire. */}
+            </p>
         </div>
     );
 };
