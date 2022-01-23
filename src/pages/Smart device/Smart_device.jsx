@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { Button, Card, Carousel, Col, Container, Image, Modal, Row, Table } from 'react-bootstrap';
+import { Button, Card, Col, Container, Image, Modal, Row, Table } from 'react-bootstrap';
 import Latex from 'react-latex'
 import { BsClipboardData, BsGithub } from 'react-icons/bs'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
-
+import { Carousel } from 'react-responsive-carousel';
 import PCB_comp from '../../components/3d-component/3d-component'
 
 import Sensor from '../../assets/AIME Sensor.svg'
@@ -27,6 +27,8 @@ import './Smart_device.css'
 import { useEffect } from 'react';
 
 import datasheet from '../../assets/Datasheet AIME.pdf'
+import SkillMatrixSmartDevice from '../../components/SkillMatrix/SkillMatrixSmartDevice';
+
 
 const Smart_device = () => {
     const [imgs] = useState([Sensor, R_alu, R_poly, R_sens, Assembly, DIE, goute]);
@@ -152,7 +154,24 @@ const Smart_device = () => {
                 <div className="Row-sensor">
                     <Row>
                         <Col md={6} className='d-flex justify-content-center carousel-col mb-5'>
-                            <Carousel fade activeIndex={index} onSelect={handleSelect} interval={null} className='Sensor-carousel'>
+                            <Carousel showStatus={false} showThumbs={true} autoPlay={false} infiniteLoop>
+                                <div>
+                                    <img src={Sensor} alt="SDR1" className='w-75' />
+                                </div>
+                                <div>
+                                    <img src={R_alu} alt="SDR2" className='w-75' />
+                                </div>
+                                <div>
+                                    <img src={R_poly} alt="SDR1" className='w-75' />
+                                </div>
+                                <div>
+                                    <img src={R_sens} alt="SDR2" className='w-75' />
+                                </div>
+                                <div>
+                                    <img src={Assembly} alt="SDR1" className='w-75' />
+                                </div>
+                            </Carousel>
+                            {/* <Carousel fade activeIndex={index} onSelect={handleSelect} interval={null} className='Sensor-carousel'>
                                 <Carousel.Item >
                                     <Image src={Sensor} ></Image>
                                     <Carousel.Caption>
@@ -183,7 +202,7 @@ const Smart_device = () => {
                                         <h6 className='ref'>Assemblage de la puce sur un boitier TO-5-10</h6>
                                     </Carousel.Caption>
                                 </Carousel.Item>
-                            </Carousel>
+                            </Carousel> */}
                         </Col>
                         <Col md={6} className='d-flex justify-content-center align-items-center'>
                             <p className='text-white'>La puce du capteur estS formée de 4 composants: <br />
@@ -228,7 +247,15 @@ const Smart_device = () => {
                             </div>
                         </Col>
                         <Col md={6} className='d-flex justify-content-center carousel-col'>
-                            <Carousel fade className='Sensor-carousel' interval={null}>
+                            <Carousel showStatus={false} showThumbs={true} autoPlay={false} infiniteLoop>
+                                <div>
+                                    <img src={DIE} alt="SDR1" className='w-75' />
+                                </div>
+                                <div>
+                                    <img src={goute} alt="SDR2" className='w-75' />
+                                </div>
+                            </Carousel>
+                            {/* <Carousel fade className='Sensor-carousel' interval={null}>
                                 <Carousel.Item >
                                     <Image src={DIE} className='w-100'></Image>
                                     <Carousel.Caption>
@@ -241,7 +268,7 @@ const Smart_device = () => {
                                         <h6 className='ref'>Dépot d'une gôute du <Latex>{"$WO_3$"}</Latex></h6>
                                     </Carousel.Caption>
                                 </Carousel.Item>
-                            </Carousel>
+                            </Carousel> */}
                         </Col>
                     </Row>
                     <animated.h2 style={props} className="text-orange MOSH sous-titre">Laboratoires d'électronique analogique</animated.h2>
@@ -420,8 +447,9 @@ const Smart_device = () => {
                     Le développement d'applications pour interagir entre capteurs et microcontrôleurs a amélioré mes compétences en softskills.
                     Enfin, j'ai acquis une nouvelle compétence, la couche middleware, en configurant un module de communication entre
                     les appareils et les serveurs avec le protocole LoRaWAN.
-
                 </p>
+                <h2 id="description" className='text-gray titre'>Partie Analytique</h2>
+                <SkillMatrixSmartDevice />
             </Container>
         </div>
     );

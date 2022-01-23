@@ -11,6 +11,8 @@ import NB_IOT from '../../assets/NB_IOT.JPG'
 import WSN from '../../assets/WSN.JPG'
 import health from '../../assets/5g_health.JPG'
 import SDN from '../../assets/SDN.JPG'
+import cond0 from '../../assets/Energie/0.jpg'
+import cond1 from '../../assets/Energie/1.jpg'
 
 
 import './Communication.css'
@@ -22,6 +24,7 @@ import NB_Iot from '../../assets/NB_Iot.pdf'
 import rapport_wsn from '../../assets/rapport_wsn.pdf'
 import wsn from '../../assets/WSN.pdf'
 import health_pdf from '../../assets/impact_5G_sante.pdf'
+import SkillMatrixCommunication from '../../components/SkillMatrix/SkillMatrixCommunication';
 
 
 const Communication = () => {
@@ -99,20 +102,19 @@ const Communication = () => {
                     <Col md={6}>
                         <p className="text-white">
                             La principale expérience que j'ai retenue de ce module concerne la série de travaux pratiques qui se sont
-                            concentrés sur les radios définies par logiciel, et la pratique sur des périphériques Universal Software Radio
-                            Peripheral (USRP) qui sont des radios définies par logiciel utilisées pour les applications RF.
-                            Les émetteurs-récepteurs USRP peuvent émettre et recevoir des signaux RF dans plusieurs bandes. L'intérêt
-                            de la SDR est de pouvoir remplacer l'utilisation de composants hardware pour le décalage de fréquence,
-                            la démodulation et d'autres opérations clés pour recevoir un signal par un seul appareil, et toute la partie
-                            décodage du signal est réalisée par logiciel. <br /> <br />
+                            concentrés sur les radios définies par logiciel, et la pratique sur des périphériques Universal Software
+                            Radio Peripheral (USRP) qui sont munies de cartes mères qui leur permettent de générer ainsi qu'analyser
+                            différents types de signaux RF. Le logiciel quant à lui envoie des instructions à la radio USRP qui ont
+                            été définies par un utilisateur.
+                            <br /> <br />
                             Dans les trois TPs, nous avons d'abord étudié la théorie du traitement du signal FM, puis nous avons utilisé
                             le logiciel Gnu radio pour exploiter un signal radio entrant. <br /> <br />
-                            L'idée était de prendre en entrée un signal radio enregistré et d'essayer de démoduler le son radio de la source.
-                            Pour cela, nous avons mis en place différents éléments de traitement, comme un déphaseur de fréquence, des filtres passe-bas pour
-                            traiter le bruit, ou encore des démodulateurs de fréquence. Tout se fait par logiciel, en introduisant les paramètres et les variables
-                            correctes pour les blocs GNU-radio prédéfinis qu'il suffit de relier entre eux de la bonne manière pour décoder le signal. <br /> <br />
-                            Vous pouvez consulter l'intégralité du rapport sur le lien ci-dessous pour consulter le rapport. <br /> <br />
-                            <Button href={rapport_SDR} target='Blank_'>
+                            L'idée était de récupérer un signal radio (radio FM) et d'essayer de démoduler le son radio de la source.
+                            Pour cela, nous avons mis en place différents éléments de traitement, comme un déphaseur de fréquence, des
+                            filtres passe-bas et des démodulateurs de fréquence. Tout se fait par logiciel, en introduisant les bons
+                            paramètres et variables pour les blocs GNU-radio prédéfinis qui n'ont plus qu'à être reliés entre eux de
+                            la bonne manière pour envoyer les configurations vers l'USRP afin de décoder le son. <br /> <br />
+                            <Button href={rapport_SDR} target='Blank_' variant='secondary' >
                                 Rapport SDR
                             </Button>
 
@@ -145,8 +147,8 @@ const Communication = () => {
                                 </div>
                             </Zoom>
                             <div className='d-flex justify-content-around mt-4 mb-4'>
-                                <Button href={Rapport_NB_IoT} target="Blank_">Rapport NB-IoT</Button>
-                                <Button href={NB_Iot} target='Blank_'>Présentation NB-IoT</Button>
+                                <Button href={Rapport_NB_IoT} target="Blank_" variant='secondary'>Rapport NB-IoT</Button>
+                                <Button href={NB_Iot} target='Blank_' variant='secondary'>Présentation NB-IoT</Button>
                             </div>
                         </div>
 
@@ -157,8 +159,8 @@ const Communication = () => {
                                 </div>
                             </Zoom>
                             <div className='d-flex justify-content-around mt-4 mb-4'>
-                                <Button href={rapport_wsn} target="Blank_" className='w-25' size="sm">Rapport MAC layer for WSN</Button>
-                                <Button href={wsn} target='Blank_' className='w-25' size="sm">Présentation MAC layer for WSN</Button>
+                                <Button href={rapport_wsn} target="Blank_" className='w-25' size="sm" variant='secondary'>Rapport MAC layer for WSN</Button>
+                                <Button href={wsn} target='Blank_' className='w-25' size="sm" variant='secondary'>Présentation MAC layer for WSN</Button>
                             </div>
                         </div>
 
@@ -210,7 +212,7 @@ const Communication = () => {
                         <Zoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
                             <img src={health} alt="5g" className='w-100 d-blick mx-auto' />
                         </Zoom>
-                        <Button href={health_pdf} target="Blank_" className='mt-4 mb-4'> Impact de la 5G sur la santé</Button>
+                        <Button href={health_pdf} target="Blank_" className='mt-4 mb-4' variant='secondary'> Impact de la 5G sur la santé</Button>
                     </Col>
                 </Row>
                 <h2 className="text-orange sous-titre">Réseaux émergents</h2>
@@ -218,7 +220,7 @@ const Communication = () => {
                     <Col md={8} className='d-flex align-items-center'>
                         <p className="text-white">
                             Les cours sur les réseaux émergents étaient une introduction aux réseaux définis par logiciel. L'objectif
-                            principal était de comprendre les nouveaux réseaux émergents qui sont très utiles dans un contexte IoT, 
+                            principal était de comprendre les nouveaux réseaux émergents qui sont très utiles dans un contexte IoT,
                             et de nous
                             faire manipuler ces réseaux. Les réseaux définis par logiciel nous permettent de gérer le réseau
                             de manière logicielle. <br /> <br />
@@ -237,6 +239,47 @@ const Communication = () => {
                         </Zoom>
                     </Col>
                 </Row>
+                <h2 className="text-orange sous-titre">L'énergie pour les objets connectés</h2>
+                <p className="text-whie">
+                    L'objectif de ce module est de présenter la mise en place de règles de sécurité pour faire face aux différentes
+                    attaques relatives aux objets connectés. Nous avons dû produire une analyse de sécurité sur notre projet innovant
+                    afin d'identifier les informations à protéger pour notre système.
+                    Les travaux pratiques de ce cours se sont concentrés sur les attaques matérielles basées sur l'injection de fautes.
+                    Il s'agit d'introduire une faille pyhique dans le système afin de modifier son comportement. L'objectif de ce
+                    laboratoire était de comprendre le fonctionnement de ces attaques et de proposer.
+                </p>
+                <Row>
+                    <Col lg={5}>
+                        <Carousel showStatus={false} showThumbs={false} autoPlay={false} infiniteLoop>
+                            <div>
+                                <img src={cond0} alt="SDR1" className='w-75' />
+                            </div>
+                            <div>
+                                <img src={cond1} alt="SDR2" className='w-50' />
+                            </div>
+                        </Carousel>
+                    </Col>
+                    <Col lg={7} className='d-flex align-items-center'>
+                        <p className="text-white">
+                            Le cours sur l'énergie pour les objets connectés porte sur les différentes méthodes de récolte d'énergie pour les
+                            systèmes embarqués et les différents types de stockage tels que les batteries et les supercondensateurs.
+                            Nous avons également suivi l'un des travaux pratiques sur la récolte et le transfert d'énergie sans fil par
+                            le biais d'ondes électromagnétiques.
+                            Les antennes utilisées dans ce laboratoire n'ont malheureusement pas fonctionné correctement et nous n'avons
+                            pas pu réaliser tous les tests par nous-mêmes. D'autre part, nous avons pu voir quelques expériences sur la
+                            récolte d'énergie en termes de portée, mais cette technologie n'est pas encore mature pour ce qu'elle rapporte
+                            comme rendement. <br />
+                            Nous avons également eu deux autres travaux pratiques au laboratoire de l'AIME qui avaient pour but de
+                            construire des micros supercondensateur. <br />
+
+                            Vous pouvez trouver ci-dessous quelques photos du résultat <br />
+                        </p>
+                    </Col>
+                </Row>
+                <h2 className="text-orange sous-titre">Sécurité dans les réseaux d'objets connectés</h2>
+                <p className="text-white">
+
+                </p>
                 <h2 id="description" className='text-gray titre'>Challenges rencontrés</h2>
                 <p className="text-white">
                     Les difficultés que j'ai rencontrées durant le module de communication se trouvaient dans la partie recherche sur
@@ -253,6 +296,8 @@ const Communication = () => {
                     Ce que j'ai vraiment apprécié dans ce module, c'est qu'il a abordé l'IoT sous différents angles, à la fois techniques
                     et théoriques, pour nous donner une image claire et complète de l'état actuel de l'Internet des objets.
                 </p>
+                <h2 id="description" className='text-gray titre'>Partie Analytique</h2>
+                <SkillMatrixCommunication />
             </Container>
         </div>
     );

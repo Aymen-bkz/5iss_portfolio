@@ -34,6 +34,9 @@ const TextAnime = (props) => {
             {/* <FadeIn transitionDuration={500} delay={300}>
                 <div><h5 className="text-orange">Bonjour, je suis</h5></div>
             </FadeIn> */}
+            <FadeIn transitionDuration={1000} delay={100} className='text-light-gray'>
+                <h1 className='fw-bolder'>Bienvenue dans mon portefeuille.</h1>
+            </FadeIn>
             <h1 className="ml6 text-light-gray">
                 <span className="text-wrapper">
                     <div className="nom">
@@ -47,6 +50,7 @@ const TextAnime = (props) => {
             <FadeIn transitionDuration={500} delay={1500} className='text-gray'>
                 <h4>Ingénieur en Electronique, Automatique, Systèmes embarqués </h4>
             </FadeIn>
+            
         </div>
     );
 };

@@ -61,8 +61,8 @@ const Navbar = () => {
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item className='text-start' style={{ margin: "1rem 0" }}>
-                        <Nav.Link as={Link} to='resume' style={{ color: "white" }} eventKey={3}>
-                            <BsReverseLayoutTextSidebarReverse className="bi me-2" /> Resume
+                        <Nav.Link as={Link} to='CV' style={{ color: "white" }} eventKey={3}>
+                            <BsReverseLayoutTextSidebarReverse className="bi me-2" /> CV
                         </Nav.Link>
                     </Nav.Item>
                 </Nav>

@@ -1,0 +1,9 @@
+.about {
+    margin: 0 50px 0 235px;
+}
+
+@media screen and (max-width: 430px) {
+    .about {
+        margin: 4em 0;
+    }
+}

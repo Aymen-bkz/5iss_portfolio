@@ -12,6 +12,7 @@ import gif from '../../assets/gif/gif.gif'
 import ip5305 from '../../assets/IP5305C.png'
 import dynamo from '../../assets/dynamo.JPG'
 import db from '../../assets/db.png'
+import SkillMatrixProject from '../../components/SkillMatrix/SkillMatrixProject';
 
 const Project = () => {
     return (
@@ -68,21 +69,6 @@ const Project = () => {
                     </tr>
                 </tbody>
             </Table>
-            <h2 className="text-orange sous-titre">Portfolio</h2>
-            <Row>
-                <Col md={4} className="d-flex justify-content-center">
-                    <img src={react_logo} alt="react_logo" className="w-50" />
-                </Col>
-                <Col md={8} className="d-flex align-items-center">
-                    <p className="text-white">
-                        Le principal défi est bien sûr d'écrire de manière autonome le contenu du portfolio. J'ai choisi de construire
-                        un site web dans un premier temps pour avoir un portfolio vraiment flexible, où l'on pourrait naviguer clairement
-                        et facilement entre toutes les pièces qui sont mises ensemble. Dans un deuxième temps, j'ai voulu développer
-                        mes compétences en développement web et j'ai choisi de développer ce site en React, un des principaux frameworks
-                        de développement web utilisés.
-                    </p>
-                </Col>
-            </Row>
             <h2 className="text-orange sous-titre">English</h2>
             <p className="text-white">
                 L'anglais a été important pendant le semestre SSI, et c'est la langue appliquée dans presque tous les cours.
@@ -168,6 +154,22 @@ const Project = () => {
                     </ImageZoom>
                 </Col>
             </Row>
+            <h2 className="text-orange sous-titre">Portfolio</h2>
+            <Row>
+                <Col md={4} className="d-flex justify-content-center">
+                    <img src={react_logo} alt="react_logo" className="w-50" />
+                </Col>
+                <Col md={8} className="d-flex align-items-center">
+                    <p className="text-white">
+                        Le principal défi du portfolio était de bien décrire le contenu du portfolio d'une manière autonome.
+                        J'ai choisi de construire un site web pour avoir un portfolio vraiment flexible, où l'on pourrait naviguer
+                        clairement et facilement entre toutes les pièces qui sont mises ensemble. De plus, je voulais développer
+                        mes compétences en web et j'ai choisi de développer ce site en React, l'un des principaux frameworks utilisés
+                        pour le développement web.
+                    </p>
+                </Col>
+            </Row>
+
             <h2 id="description" className='text-gray titre'>Partie analytique</h2>
             <p className="text-white">
                 Pour ce module, le projet innovant résume vraiment une grande partie de l'année pour moi, je me suis vraiment investi dans
@@ -179,11 +181,12 @@ const Project = () => {
                 projet du Hackathon. <br />
                 Les cours d'anglais ont été très importants, ils m'ont donné beaucoup plus de confiance et m'ont permis de m'exprimer et de
                 présenter le projet avec la langue la plus employée, surtout dans le domaine de l'ingénierie.
-                <br /> 
+                <br />
                 {/* Enfin, le portfolio a été un véritable défi pour moi et une expérience très enrichissante. J'ai fait le choix de développer
                 le portfolio en tant que site web avec le framework REACT en passant par toutes les phases, alors que je suis formé aux systèmes
                 embarqués, mais cela ne m'a pas empêché d'investir beaucoup de temps pour finalement réussir à le faire. */}
             </p>
+            <SkillMatrixProject />
         </div>
     );
 };

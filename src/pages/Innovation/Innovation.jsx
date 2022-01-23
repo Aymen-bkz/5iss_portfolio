@@ -11,6 +11,7 @@ import triz from '../../assets/TRIZ.JPG'
 
 import Engineering from '../../assets/rapports/Engineering Ethics Issues.pdf'
 import trizPdf from '../../assets/rapports/TRIZ.pdf'
+import SkillMatrixInnovation from '../../components/SkillMatrix/SkillMatrixInnovation';
 
 
 
@@ -180,7 +181,15 @@ const Innovation = () => {
                     entretiens d'embauche réels que j'ai eus plus tard dans le semestre.
                 </p>
                 <h2 id="description" className='text-gray titre'>Partie Analytique</h2>
-
+                <p className="text-white">
+                    Pour la gestion d'un projet innovant, ce sont des compétences très importantes que j'ai un peu de mal à maîtriser.
+                    Je pense que mon expérience à travers ces cours m'a aidé à avoir plus de confiance lorsque je présente, à améliorer
+                    mes compétences pour défendre mes idées et à mieux convaincre.
+                    Je pense que les cours de gestion d'équipe et de psychologie sociale sont importants pour l'apprentissage de ces
+                    compétences, mais le simple fait de côtoyer des étudiants issus de milieux, de cultures et de pays différents m'a
+                    également beaucoup aidé.
+                </p>
+                <SkillMatrixInnovation />
             </Container>
         </div>
     );

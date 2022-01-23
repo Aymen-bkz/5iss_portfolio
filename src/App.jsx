@@ -13,6 +13,8 @@ import Project from './pages/Project/Project';
 import Middleware from './pages/Middleware/Middleware';
 import BigData from './pages/BigData/BigData';
 import Innovation from './pages/Innovation/Innovation';
+import About from './pages/About/About';
+import CV from './pages/CV/CV';
 
 
 
@@ -32,6 +34,8 @@ function App() {
                     <Route path='/middleware' element={<Middleware />} />
                     <Route path='/bigData' element={<BigData />} />
                     <Route path='/innovation' element={<Innovation />} />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/cv' element={<CV />} />
                 </Routes>
             </BrowserRouter>
         </div>
