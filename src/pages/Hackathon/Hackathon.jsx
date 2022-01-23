@@ -52,7 +52,7 @@ const Hackathon = () => {
                             de différentes spécialité. nous étions 2 du département électronique, 1 master IoT et 2 du département informatique. <br /> <br />
                         </p>
                     </Col>
-                    <Col lg={6} className='d-flex align-items-center'>
+                    <Col lg={6} className='d-flex align-items-center mt-1 mb-3'>
                         <img src={om2m} alt="om2m" className='w-100' />
                     </Col>
                     <p className="text-white">
@@ -85,7 +85,7 @@ const Hackathon = () => {
                 <Row>
                     <Col lg={3}>
                         <Zoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
-                            <img src={AJATA} alt="AJATA" className='w-100' />
+                            <img src={AJATA} alt="AJATA" className='w-100 mb-3' />
                         </Zoom>
                     </Col>
                     <Col lg={9} className='d-flex align-items-center'>

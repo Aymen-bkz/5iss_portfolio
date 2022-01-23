@@ -12,6 +12,7 @@ import Hackathon from './pages/Hackathon/Hackathon';
 import Project from './pages/Project/Project';
 import Middleware from './pages/Middleware/Middleware';
 import BigData from './pages/BigData/BigData';
+import Innovation from './pages/Innovation/Innovation';
 
 
 
@@ -30,6 +31,7 @@ function App() {
                     <Route path='/project' element={<Project />} />
                     <Route path='/middleware' element={<Middleware />} />
                     <Route path='/bigData' element={<BigData />} />
+                    <Route path='/innovation' element={<Innovation />} />
                 </Routes>
             </BrowserRouter>
         </div>

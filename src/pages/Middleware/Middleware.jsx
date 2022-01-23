@@ -104,7 +104,7 @@ const Middleware = () => {
                             </div>
                         </ImageZoom>
                         <ImageZoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
-                            <div className='mt-3'>
+                            <div className='mt-3 mb-3'>
                                 <Image src={MQTT} className='w-75 d-block mx-auto' />
                             </div>
                         </ImageZoom>
@@ -127,12 +127,12 @@ const Middleware = () => {
                 <Row>
                     <Col>
                         <ImageZoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
-                            <div className='mt-3'>
+                            <div className='mt-3 mb-3'>
                                 <Image src={SOA_arch} className='w-75 d-block mx-auto' />
                             </div>
                         </ImageZoom>
                         <ImageZoom zoomMargin={50} overlayBgColorEnd='rgba(0,0,0,0.5)'>
-                            <div className='mt-3'>
+                            <div className='mt-3 mb-3'>
                                 <Image src={SOA_dash} className='w-75 d-block mx-auto' />
                             </div>
                         </ImageZoom>
@@ -171,7 +171,7 @@ const Middleware = () => {
                     </Col>
                     <Col lg={6} className='d-flex align-items-center'>
                         <ImageZoom zoomMargin={150} overlayBgColorEnd='rgba(0,0,0,0.5)'>
-                            <div className='mt-3'>
+                            <div className='mt-3 mb-3'>
                                 <Image src={node_red_mqtt_om2m} className='w-100 d-block mx-auto' />
                             </div>
                         </ImageZoom>
@@ -191,7 +191,7 @@ const Middleware = () => {
                 <Row>
                     <Col lg={5}>
                         <ImageZoom zoomMargin={100} overlayBgColorEnd='rgba(0,0,0,0.5)'>
-                            <div className='mt-3'>
+                            <div className='mt-3 mb-3'>
                                 <Image src={openstack} className='w-75 d-block mx-auto' />
                             </div>
                         </ImageZoom>
