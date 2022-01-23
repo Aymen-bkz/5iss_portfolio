@@ -52,7 +52,7 @@ const SkillMatrixMiddleware = () => {
                     </tr>
                     <tr>
                         <th className='ps-3'>Savoir comment définir une architecture orientée services</th>
-                        <td className='text-center w-25'>4</td>
+                        <td className='text-center'>4</td>
                         <td className='text-center'>4</td>
                         <td className='text-center'>Cours et TD</td>
                     </tr>

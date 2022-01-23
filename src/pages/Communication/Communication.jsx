@@ -34,7 +34,7 @@ const Communication = () => {
                         <Card.Body className='text-center'>
                             <h2 className='text-orange h2 sous-titre'>Communication</h2>
                             <hr />
-                            <Card.Text className='text-gray'>
+                            <Card.Text className='text-gray fs-6'>
                                 L'internet des objets (IoT) est un vaste réseau de dispositifs équipés avec des capteurs qui permettent d'échanger ou de collecter
                                 des données en se basant sur des protocoles de communication comme LoRA, BLE, NB-IoT...
                             </Card.Text>

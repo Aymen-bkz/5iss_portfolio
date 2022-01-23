@@ -34,7 +34,7 @@ const Hackathon = () => {
                 </div>
                 <h2 id="description" className='text-gray titre'>Description</h2>
                 <Row>
-                    <Col md={6} className='d-flex align-items-center'>
+                    <Col lg={6} className='d-flex align-items-center'>
                         <p className="text-white">
                             Le Hackaton de l'INSA Toulouse a eu lieu du 30 septembre au 13 novembre organisé et géré par KETI
                             (Korea Eletronics Technology Institute) et ETSI (European Telecommunication Standards Institute). <br />
@@ -52,7 +52,7 @@ const Hackathon = () => {
                             de différentes spécialité. nous étions 2 du département électronique, 1 master IoT et 2 du département informatique. <br /> <br />
                         </p>
                     </Col>
-                    <Col md={6} className='d-flex align-items-center'>
+                    <Col lg={6} className='d-flex align-items-center'>
                         <img src={om2m} alt="om2m" className='w-100' />
                     </Col>
                     <p className="text-white">
@@ -83,12 +83,12 @@ const Hackathon = () => {
                 </p>
                 <h2 className="text-orange titre">Résultats</h2>
                 <Row>
-                    <Col md={3}>
+                    <Col lg={3}>
                         <Zoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
                             <img src={AJATA} alt="AJATA" className='w-100' />
                         </Zoom>
                     </Col>
-                    <Col md={9} className='d-flex align-items-center'>
+                    <Col lg={9} className='d-flex align-items-center'>
                         <p className="text-white">
                             A la fin de cette compétition, notre système était capable de récupérer les données des capteurs, de calculer
                             la vitesse des objets et d'envoyer les données au serveur.
@@ -101,7 +101,7 @@ const Hackathon = () => {
 
                 <h2 id="technique" className='text-gray titre'>Partie Technique</h2>
                 <Row>
-                    <Col md={6}>
+                    <Col lg={6}>
                         <p className="text-white">
                             Tout d'abord, voici un petit résumé du projet :
                             Nous avons deux capteurs ultrason et un GPS Sim28 connectés à un ESP8622, le tout embarqué dans un vélo.
@@ -133,7 +133,7 @@ const Hackathon = () => {
                             avec des requetés POST.
                         </p>
                     </Col>
-                    <Col md={6} >
+                    <Col lg={6} >
                         <img src={tech} alt="AJATA" className='w-100 mt-2' />
                         <Player className="mt-5">
                             <source src={video} />

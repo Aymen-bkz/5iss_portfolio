@@ -24,7 +24,7 @@ const Middleware = () => {
                         <Card.Body className='text-center'>
                             <h2 className='text-orange h2 sous-titre'>Middleware and Service</h2>
                             <hr />
-                            <Card.Text className='text-gray'>
+                            <Card.Text className='text-gray fs-6'>
                                 Il y a des milliards d'appareils physiques dans le monde qui sont actuellement connectés à l'internet,
                                 tous collectant et partageant des données. Dans ce cours, nous étudierons comment interfacer les composants
                                 de l'IoT et comment déployer des services sur Internet.
@@ -84,7 +84,7 @@ const Middleware = () => {
                     bien expliqués et présenter avec des vidéos.
                 </p>
                 <Row>
-                    <Col md={8} className="d-flex align-items-center">
+                    <Col lg={8} className="d-flex align-items-center">
                         <p className="text-white">j'ai pu découvrir le standard OneM2M qui propose une vision générale des systèmes
                             connectés, et nous préparer à la compétition du Hackathon.
                             L'architecture du standard est modélisée par une première couche applicative, les AE (Application Entities)
@@ -97,7 +97,7 @@ const Middleware = () => {
                         </p>
 
                     </Col>
-                    <Col md={4} className="d-flex flex-column ">
+                    <Col lg={4} className="d-flex flex-column ">
                         <ImageZoom zoomMargin={200} overlayBgColorEnd='rgba(0,0,0,0.5)'>
                             <div className='mb-3'>
                                 <Image src={OneM2M} className='w-75 d-block mx-auto' />
@@ -137,7 +137,7 @@ const Middleware = () => {
                             </div>
                         </ImageZoom>
                     </Col>
-                    <Col md={8} className="d-flex align-items-center">
+                    <Col lg={8} className="d-flex align-items-center">
                         <p className="text-white">
                             Le projet doit être déployé sur les micro-services du Framework SpringBoot. L'architecture consiste à créer,
                             pour chaque type de capteurs et d'actionneurs, un microservice qui possède un modèle pour décrire les Setter
@@ -154,7 +154,7 @@ const Middleware = () => {
                 </Row>
                 <h2 className='text-orange h2 sous-titre'>Middleware for IoT</h2>
                 <Row>
-                    <Col md={6}>
+                    <Col lg={6}>
                         <p className="text-white">
                             Durant le TP j'ai réalisé un cas d'utilisation d'un système qui regroupe l'ensemble des protocoles de
                             communication MQTT, OM2M et une couche applicative avec Node-Red.
@@ -169,7 +169,7 @@ const Middleware = () => {
                             des valeurs du capteur, il allume et éteint les lampes sur le serveur OM2M.
                         </p>
                     </Col>
-                    <Col md={6} className='d-flex align-items-center'>
+                    <Col lg={6} className='d-flex align-items-center'>
                         <ImageZoom zoomMargin={150} overlayBgColorEnd='rgba(0,0,0,0.5)'>
                             <div className='mt-3'>
                                 <Image src={node_red_mqtt_om2m} className='w-100 d-block mx-auto' />
@@ -189,14 +189,14 @@ const Middleware = () => {
                     <br /> <br />
                 </p>
                 <Row>
-                    <Col md={5}>
+                    <Col lg={5}>
                         <ImageZoom zoomMargin={100} overlayBgColorEnd='rgba(0,0,0,0.5)'>
                             <div className='mt-3'>
                                 <Image src={openstack} className='w-75 d-block mx-auto' />
                             </div>
                         </ImageZoom>
                     </Col>
-                    <Col md={7} className="d-flex align-items-center">
+                    <Col lg={7} className="d-flex align-items-center">
                         <p className="text-white">
                             Ensuite, nous avons utilisé une autre technologie, Openstack. Il s'agit d'un serveur bare metal, qui fournit des
                             machines virtuelles fonctionnant directement sur la couche matériel du serveur et que vous pouvez administrer
@@ -211,7 +211,7 @@ const Middleware = () => {
                 </Row>
                 <h2 id="description" className='text-gray titre'>Partie Analytique</h2>
                 <Row>
-                    <Col md={12}>
+                    <Col lg={12}>
                         <p className="text-white">
                             Le module "Middleware et Service" est très important dans la formation ISS, j'ai pu découvrir beaucoup de notions sur
                             les protocoles de communication, notamment le standard OneM2M que j'ai pu manipuler lors de la compétition Hackathon.
@@ -226,9 +226,13 @@ const Middleware = () => {
                             ont été très utiles car nous avons vraiment pris le temps de pratiquer la virtualisation à la fois sur VirtualBox
                             et Openstack, assimilant ainsi les principales compétences du cours.
                         </p>
+
                     </Col>
-                    <Col md={12}>
-                        <SkillMatrixMiddleware />
+                    <Col lg={12} className='d-flex justify-content-center'>
+                        <div className="">
+                            <SkillMatrixMiddleware />
+                        </div>
+
                     </Col>
                 </Row>
             </Container>

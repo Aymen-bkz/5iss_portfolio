@@ -11,6 +11,7 @@ import Particles_compo from './components/background/background';
 import Hackathon from './pages/Hackathon/Hackathon';
 import Project from './pages/Project/Project';
 import Middleware from './pages/Middleware/Middleware';
+import BigData from './pages/BigData/BigData';
 
 
 
@@ -28,6 +29,7 @@ function App() {
                     <Route path='/hackathon' element={<Hackathon />} />
                     <Route path='/project' element={<Project />} />
                     <Route path='/middleware' element={<Middleware />} />
+                    <Route path='/bigData' element={<BigData />} />
                 </Routes>
             </BrowserRouter>
         </div>
